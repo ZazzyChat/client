@@ -1,4 +1,4 @@
-# wokytoky
+# ZazzyChat
 
 A new Flutter project.
 
