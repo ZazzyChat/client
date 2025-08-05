@@ -2202,7 +2202,7 @@
   "@videoCallsBetaWarning": {},
   "experimentalVideoCalls": "Экспериментальные видеозвонки",
   "@experimentalVideoCalls": {},
-  "emailOrUsername": "Адрес электронной почты или имя пользователя",
+  "emailOrUsername": "Имя пользователя",
   "@emailOrUsername": {},
   "pinMessage": "Прикрепить к комнате",
   "@pinMessage": {},

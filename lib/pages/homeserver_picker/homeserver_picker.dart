@@ -2,26 +2,20 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-// ignore: unused_import
-import 'package:collection/collection.dart';
-import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:matrix/matrix.dart';
 import 'package:universal_html/html.dart' as html;
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 
 import 'package:zazzychat/config/app_config.dart';
 import 'package:zazzychat/l10n/l10n.dart';
-import 'package:zazzychat/utils/file_selector.dart';
 import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/tor_stub.dart'
+    if (dart.library.html) 'package:tor_detector_web/tor_detector_web.dart';
 import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
 import 'package:zazzychat/widgets/matrix.dart';
 import '../../utils/localized_exception_extension.dart';
-
-import 'package:zazzychat/utils/tor_stub.dart'
-    if (dart.library.html) 'package:tor_detector_web/tor_detector_web.dart';
 
 class HomeserverPicker extends StatefulWidget {
   final bool addMultiAccount;
@@ -43,14 +37,14 @@ class HomeserverPickerController extends State<HomeserverPicker> {
     _checkTorBrowser();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _autoLoginToWoky();
+      _autoLoginToZazzy();
     });
   }
 
   Future<void> _checkTorBrowser() async {
     if (!kIsWeb) return;
 
-    Hive.openBox('test').then((value) => null).catchError((e, s) async {
+    Hive.openBox('test').then((_) => null).catchError((e, s) async {
       await showOkAlertDialog(
         context: context,
         title: L10n.of(context).indexedDbErrorTitle,
@@ -63,7 +57,7 @@ class HomeserverPickerController extends State<HomeserverPicker> {
     isTorBrowser = isTor;
   }
 
-  Future<void> _autoLoginToWoky() async {
+  Future<void> _autoLoginToZazzy() async {
     setState(() {
       error = null;
       isLoading = true;
@@ -74,8 +68,8 @@ class HomeserverPickerController extends State<HomeserverPicker> {
 
     try {
       final client = await Matrix.of(context).getLoginClient();
-      final (_, _, loginFlows) = await client.checkHomeserver(homeserver);
-      this.loginFlows = loginFlows;
+      final (_, _, flows) = await client.checkHomeserver(homeserver);
+      loginFlows = flows;
       client.homeserver = homeserver;
 
       if (_supportsFlow('m.login.sso')) {
@@ -94,7 +88,7 @@ class HomeserverPickerController extends State<HomeserverPicker> {
       context.go('/home/login', extra: client);
     } catch (e) {
       setState(() {
-        error = (e).toLocalizedString(
+        error = e.toLocalizedString(
           context,
           ExceptionContext.checkHomeserver,
         );
@@ -152,7 +146,40 @@ class HomeserverPickerController extends State<HomeserverPicker> {
   }
 
   @override
-  Widget build(BuildContext context) => const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Card(
+          margin: const EdgeInsets.all(32),
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (isLoading) ...[
+                  const CircularProgressIndicator(),
+                  const SizedBox(height: 16),
+                  const Text('Connecting to server zazzy.chat...'),
+                ],
+                if (error != null) ...[
+                  const Icon(Icons.error_outline, color: Colors.red),
+                  const SizedBox(height: 16),
+                  Text(
+                    error!,
+                    style: const TextStyle(color: Colors.red),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: isLoading ? null : _autoLoginToZazzy,
+                    child: const Text('REPEAT'),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }

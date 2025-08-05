@@ -2228,7 +2228,7 @@
   },
   "otherCallingPermissions": "Micrófono, cámara y otros permisos de ZazzyChat",
   "@otherCallingPermissions": {},
-  "emailOrUsername": "Correo electrónico o nombre de usuario",
+  "emailOrUsername": "Nombre de usuario",
   "@emailOrUsername": {},
   "countFiles": "{count} archivos",
   "@countFiles": {

@@ -16,11 +16,11 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    final homeserver = controller.widget.client.homeserver
-        .toString()
-        .replaceFirst('https://', '');
-    final title = L10n.of(context).logInTo(homeserver);
-    final titleParts = title.split(homeserver);
+    // final homeserver = controller.widget.client.homeserver
+        // .toString()
+        // .replaceFirst('https://', '');
+    // final title = L10n.of(context).logInTo(homeserver);
+    // final titleParts = title.split(homeserver);
 
     return LoginScaffold(
       enforceMobileMode:
@@ -56,7 +56,7 @@ class LoginView extends StatelessWidget {
                       prefixIcon: const Icon(Icons.account_box_outlined),
                       errorText: controller.usernameError,
                       errorStyle: const TextStyle(color: Colors.orange),
-                      hintText: '@username:domain',
+                      hintText: 'usernic',
                       labelText: L10n.of(context).emailOrUsername,
                     ),
                   ),
@@ -112,6 +112,10 @@ class LoginView extends StatelessWidget {
                     onPressed: controller.loading ? null : controller.register,
                     style: OutlinedButton.styleFrom(
                       foregroundColor: theme.colorScheme.primary,
+                      side: BorderSide(color: theme.colorScheme.primary),
+                      shape: const StadiumBorder(), // кнопка-капсула
+                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+                      textStyle: const TextStyle(fontWeight: FontWeight.w500),
                     ),
                     child: const Text('Create new account'),
                   ),

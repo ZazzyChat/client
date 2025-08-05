@@ -2453,7 +2453,7 @@
   "@videoCallsBetaWarning": {},
   "experimentalVideoCalls": "Experimental video calls",
   "@experimentalVideoCalls": {},
-  "emailOrUsername": "Email or username",
+  "emailOrUsername": "Username",
   "@emailOrUsername": {},
   "indexedDbErrorTitle": "Private mode issues",
   "@indexedDbErrorTitle": {},

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 
 import 'package:zazzychat/l10n/l10n.dart';
-import 'package:zazzychat/utils/localized_exception_extension.dart';
+// import 'package:zazzychat/utils/localized_exception_extension.dart';
 import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
 import 'package:zazzychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
 import 'package:zazzychat/widgets/future_loading_dialog.dart';
@@ -108,7 +108,7 @@ class LoginController extends State<Login> {
     if (mounted) setState(() => usernameError = null);
     if (!userId.isValidMatrixId) return;
     // final oldHomeserver = Uri.https('zazzy.chat', '');
-    var newDomain = Uri.https('zazzy.chat', '');
+    final newDomain = Uri.https('zazzy.chat', '');
     widget.client.homeserver = newDomain;
 
   }

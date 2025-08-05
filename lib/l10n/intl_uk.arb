@@ -2204,7 +2204,7 @@
   "@unsupportedAndroidVersionLong": {},
   "videoCallsBetaWarning": "Зауважте, що відеовиклики на ранньому етапі розробки. Вони можуть працювати не так, як очікувалося, або взагалі не працювати на всіх платформах.",
   "@videoCallsBetaWarning": {},
-  "emailOrUsername": "Електронна адреса або ім’я користувача",
+  "emailOrUsername": "Iм’я користувача",
   "@emailOrUsername": {},
   "experimentalVideoCalls": "Експериментальні відеовиклики",
   "@experimentalVideoCalls": {},

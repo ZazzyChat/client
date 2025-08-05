@@ -2206,7 +2206,7 @@
   "@videoCallsBetaWarning": {},
   "experimentalVideoCalls": "Appels vidéo expérimentaux",
   "@experimentalVideoCalls": {},
-  "emailOrUsername": "Courriel ou identifiant",
+  "emailOrUsername": "Identifiant",
   "@emailOrUsername": {},
   "switchToAccount": "Passer au compte {number}",
   "@switchToAccount": {

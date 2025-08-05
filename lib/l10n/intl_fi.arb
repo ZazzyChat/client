@@ -2227,7 +2227,7 @@
   },
   "experimentalVideoCalls": "Kokeelliset videopuhelut",
   "@experimentalVideoCalls": {},
-  "emailOrUsername": "Sähköposti-osoite tai käyttäjätunnus",
+  "emailOrUsername": "Käyttäjätunnus",
   "@emailOrUsername": {},
   "previousAccount": "Edellinen tili",
   "@previousAccount": {},

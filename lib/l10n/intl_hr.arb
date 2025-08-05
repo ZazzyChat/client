@@ -2194,7 +2194,7 @@
   },
   "nextAccount": "Sljedeći račun",
   "@nextAccount": {},
-  "emailOrUsername": "E-mail ili korisničko ime",
+  "emailOrUsername": "Korisničko ime",
   "@emailOrUsername": {},
   "unsupportedAndroidVersionLong": "Ova funkcija zahtijeva noviju verziju Androida. Provjeri, postoje li nove verzije ili podrška za Lineage OS.",
   "@unsupportedAndroidVersionLong": {},

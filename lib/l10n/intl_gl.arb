@@ -2198,7 +2198,7 @@
   "@confirmEventUnpin": {},
   "experimentalVideoCalls": "Chamadas de vídeo en probas",
   "@experimentalVideoCalls": {},
-  "emailOrUsername": "Email ou nome de usuaria",
+  "emailOrUsername": "Nome de usuaria",
   "@emailOrUsername": {},
   "switchToAccount": "Cambiar á conta {number}",
   "@switchToAccount": {

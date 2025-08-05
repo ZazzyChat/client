@@ -2191,7 +2191,7 @@
   "@pinMessage": {},
   "videoCallsBetaWarning": "Palun arvesta, et videokõned on veel beetajärgus. Nad ei pruugi veel toimida kõikidel platvormidel korrektselt.",
   "@videoCallsBetaWarning": {},
-  "emailOrUsername": "E-posti aadress või kasutajanimi",
+  "emailOrUsername": "Kasutajanimi",
   "@emailOrUsername": {},
   "experimentalVideoCalls": "Katselised videokõned",
   "@experimentalVideoCalls": {},
