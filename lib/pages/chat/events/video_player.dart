@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/utils/file_description.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/event_extension.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
-import 'package:wokytoky/widgets/blur_hash.dart';
-import 'package:wokytoky/widgets/mxc_image.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/utils/file_description.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
+import 'package:zazzychat/widgets/blur_hash.dart';
+import 'package:zazzychat/widgets/mxc_image.dart';
 import '../../image_viewer/image_viewer.dart';
 
 class EventVideoPlayer extends StatelessWidget {

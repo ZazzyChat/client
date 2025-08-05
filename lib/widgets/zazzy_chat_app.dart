@@ -4,22 +4,22 @@ import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:wokytoky/config/routes.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/widgets/app_lock.dart';
-import 'package:wokytoky/widgets/theme_builder.dart';
+import 'package:zazzychat/config/routes.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/widgets/app_lock.dart';
+import 'package:zazzychat/widgets/theme_builder.dart';
 import '../config/app_config.dart';
 import '../utils/custom_scroll_behaviour.dart';
 import 'matrix.dart';
 
-class FluffyChatApp extends StatelessWidget {
+class ZazzyChatApp extends StatelessWidget {
   final Widget? testWidget;
   final List<Client> clients;
   final String? pincode;
   final SharedPreferences store;
 
-  const FluffyChatApp({
+  const ZazzyChatApp({
     super.key,
     this.testWidget,
     required this.clients,
@@ -45,9 +45,9 @@ class FluffyChatApp extends StatelessWidget {
       builder: (context, themeMode, primaryColor) => MaterialApp.router(
         title: AppConfig.applicationName,
         themeMode: themeMode,
-        theme: FluffyThemes.buildTheme(context, Brightness.light, primaryColor),
+        theme: ZazzyThemes.buildTheme(context, Brightness.light, primaryColor),
         darkTheme:
-            FluffyThemes.buildTheme(context, Brightness.dark, primaryColor),
+            ZazzyThemes.buildTheme(context, Brightness.dark, primaryColor),
         scrollBehavior: CustomScrollBehavior(),
         localizationsDelegates: L10n.localizationsDelegates,
         supportedLocales: L10n.supportedLocales,

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
 
 class LoginScaffold extends StatelessWidget {
   final Widget body;
@@ -24,7 +24,7 @@ class LoginScaffold extends StatelessWidget {
     final theme = Theme.of(context);
 
     final isMobileMode =
-        enforceMobileMode || !FluffyThemes.isColumnMode(context);
+        enforceMobileMode || !ZazzyThemes.isColumnMode(context);
     if (isMobileMode) {
       return Scaffold(
         key: const Key('LoginScaffold'),

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/matrix.dart';
-import '../../utils/fluffy_share.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/matrix.dart';
+import '../../utils/zazzy_share.dart';
 import 'chat_list.dart';
 
 class ClientChooserButton extends StatelessWidget {
@@ -162,7 +162,7 @@ class ClientChooserButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(99),
         color: Colors.transparent,
         child: PopupMenuButton<Object>(
-          popUpAnimationStyle: FluffyThemes.isColumnMode(context)
+          popUpAnimationStyle: ZazzyThemes.isColumnMode(context)
               ? AnimationStyle.noAnimation
               : null, // https://github.com/flutter/flutter/issues/167180
           onSelected: (o) => _clientSelected(o, context),
@@ -205,7 +205,7 @@ class ClientChooserButton extends StatelessWidget {
           context.go('/rooms/newgroup');
           break;
         case SettingsAction.invite:
-          FluffyShare.shareInviteLink(context);
+          ZazzyShare.shareInviteLink(context);
           break;
         case SettingsAction.settings:
           context.go('/rooms/settings');

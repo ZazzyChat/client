@@ -3,14 +3,14 @@ import 'package:flutter/material.dart' hide Visibility;
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat_access_settings/chat_access_settings_page.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_modal_action_popup.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_text_input_dialog.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat_access_settings/chat_access_settings_page.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_modal_action_popup.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class ChatAccessSettings extends StatefulWidget {
   final String roomId;
@@ -46,7 +46,7 @@ class ChatAccessSettingsController extends State<ChatAccessSettings> {
       joinRules.remove(JoinRules.knock);
     }
 
-    // Not yet supported in FluffyChat:
+    // Not yet supported in ZazzyChat:
     joinRules.remove(JoinRules.restricted);
     joinRules.remove(JoinRules.knockRestricted);
 

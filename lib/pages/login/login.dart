@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_text_input_dialog.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../utils/platform_infos.dart';
 import 'login_view.dart';
 
@@ -107,8 +107,8 @@ class LoginController extends State<Login> {
   void _checkWellKnown(String userId) async {
     if (mounted) setState(() => usernameError = null);
     if (!userId.isValidMatrixId) return;
-    // final oldHomeserver = Uri.https('woky.to', '');
-    var newDomain = Uri.https('woky.to', '');
+    // final oldHomeserver = Uri.https('zazzy.chat', '');
+    var newDomain = Uri.https('zazzy.chat', '');
     widget.client.homeserver = newDomain;
 
   }

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
 import '../../../config/app_config.dart';
 
 class StateMessage extends StatelessWidget {
@@ -23,8 +23,8 @@ class StateMessage extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return AnimatedSize(
-      duration: FluffyThemes.animationDuration,
-      curve: FluffyThemes.animationCurve,
+      duration: ZazzyThemes.animationDuration,
+      curve: ZazzyThemes.animationCurve,
       child: isCollapsed
           ? const SizedBox.shrink()
           : Padding(

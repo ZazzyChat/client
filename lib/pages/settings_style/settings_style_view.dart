@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/setting_keys.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/events/state_message.dart';
-import 'package:wokytoky/utils/account_config.dart';
-import 'package:wokytoky/utils/color_value.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
-import 'package:wokytoky/widgets/matrix.dart';
-import 'package:wokytoky/widgets/mxc_image.dart';
+import 'package:zazzychat/config/setting_keys.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/events/state_message.dart';
+import 'package:zazzychat/utils/account_config.dart';
+import 'package:zazzychat/utils/color_value.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/widgets/matrix.dart';
+import 'package:zazzychat/widgets/mxc_image.dart';
 import '../../config/app_config.dart';
 import '../../widgets/settings_switch_list_tile.dart';
 import 'settings_style.dart';
@@ -32,8 +32,8 @@ class SettingsStyleView extends StatelessWidget {
     final client = Matrix.of(context).client;
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: !FluffyThemes.isColumnMode(context),
-        centerTitle: FluffyThemes.isColumnMode(context),
+        automaticallyImplyLeading: !ZazzyThemes.isColumnMode(context),
+        centerTitle: ZazzyThemes.isColumnMode(context),
         title: Text(L10n.of(context).changeTheme),
       ),
       backgroundColor: theme.colorScheme.surface,
@@ -163,8 +163,8 @@ class SettingsStyleView extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     AnimatedContainer(
-                      duration: FluffyThemes.animationDuration,
-                      curve: FluffyThemes.animationCurve,
+                      duration: ZazzyThemes.animationDuration,
+                      curve: ZazzyThemes.animationCurve,
                       decoration: const BoxDecoration(),
                       clipBehavior: Clip.hardEdge,
                       child: Stack(
@@ -183,7 +183,7 @@ class SettingsStyleView extends StatelessWidget {
                                   uri: accountConfig.wallpaperUrl,
                                   fit: BoxFit.cover,
                                   isThumbnail: true,
-                                  width: FluffyThemes.columnWidth * 2,
+                                  width: ZazzyThemes.columnWidth * 2,
                                   height: 212,
                                 ),
                               ),

@@ -5,12 +5,12 @@ import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/date_time_extension.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/presence_builder.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/date_time_extension.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/presence_builder.dart';
 import '../../utils/url_launcher.dart';
 import '../future_loading_dialog.dart';
 import '../hover_builder.dart';
@@ -94,8 +94,8 @@ class UserDialog extends StatelessWidget {
                                   child: Padding(
                                     padding: const EdgeInsets.only(right: 4.0),
                                     child: AnimatedScale(
-                                      duration: FluffyThemes.animationDuration,
-                                      curve: FluffyThemes.animationCurve,
+                                      duration: ZazzyThemes.animationDuration,
+                                      curve: ZazzyThemes.animationCurve,
                                       scale: hovered
                                           ? 1.33
                                           : copied

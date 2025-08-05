@@ -13,17 +13,17 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_html/html.dart' as html;
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/setting_keys.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/custom_http_client.dart';
-import 'package:wokytoky/utils/custom_image_resizer.dart';
-import 'package:wokytoky/utils/init_with_restore.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/setting_keys.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/custom_http_client.dart';
+import 'package:zazzychat/utils/custom_image_resizer.dart';
+import 'package:zazzychat/utils/init_with_restore.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
 import 'matrix_sdk_extensions/flutter_matrix_dart_sdk_database/builder.dart';
 
 abstract class ClientManager {
-  static const String clientNamespace = 'im.fluffychat.store.clients';
+  static const String clientNamespace = 'im.zazzychat.store.clients';
 
   static Future<List<Client>> getClients({
     bool initialize = true,

@@ -4,14 +4,14 @@ import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/fluffy_share.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/matrix.dart';
-import 'package:wokytoky/widgets/navigation_rail.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/zazzy_share.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/matrix.dart';
+import 'package:zazzychat/widgets/navigation_rail.dart';
 import '../../widgets/mxc_image_viewer.dart';
 import 'settings.dart';
 
@@ -34,7 +34,7 @@ class SettingsView extends StatelessWidget {
         ?.tryGet<String>('account');
     return Row(
       children: [
-        if (FluffyThemes.isColumnMode(context)) ...[
+        if (ZazzyThemes.isColumnMode(context)) ...[
           SpacesNavigationRail(
             activeSpaceId: null,
             onGoToChats: () => context.go('/rooms'),
@@ -47,7 +47,7 @@ class SettingsView extends StatelessWidget {
         ],
         Expanded(
           child: Scaffold(
-            appBar: FluffyThemes.isColumnMode(context)
+            appBar: ZazzyThemes.isColumnMode(context)
                 ? null
                 : AppBar(
                     title: Text(L10n.of(context).settings),
@@ -132,7 +132,7 @@ class SettingsView extends StatelessWidget {
                                 ),
                                 TextButton.icon(
                                   onPressed: () =>
-                                      FluffyShare.share(mxid, context),
+                                      ZazzyShare.share(mxid, context),
                                   icon: const Icon(
                                     Icons.copy_outlined,
                                     size: 14,

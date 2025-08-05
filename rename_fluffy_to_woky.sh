@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Название старое и новое
-OLD_NAME="fluffychat"
-NEW_NAME="wokytoky"
-OLD_PACKAGE="chat.fluffy.fluffychat"
-NEW_PACKAGE="com.wokytoky.chat"
+OLD_NAME="zazzychat"
+NEW_NAME="zazzychat"
+OLD_PACKAGE="chat.zazzy.chat"
+NEW_PACKAGE="com.zazzychat.chat"
 
 echo "🔧 Переименование проекта: $OLD_NAME → $NEW_NAME"
 echo "📦 Переименование пакета: $OLD_PACKAGE → $NEW_PACKAGE"
@@ -40,7 +40,7 @@ if [ -d "$SRC_DIR/$OLD_PATH" ]; then
   rm -rf "$SRC_DIR/$(echo "$OLD_PACKAGE" | cut -d. -f1)"  # удалим 'chat' корень
 fi
 
-# msix_config: меняем всё что выглядит как fluffychat
+# msix_config: меняем всё что выглядит как zazzychat
 sed -i "s/$OLD_NAME/$NEW_NAME/g" pubspec.yaml
 sed -i "s/$OLD_PACKAGE/$NEW_PACKAGE/g" pubspec.yaml
 

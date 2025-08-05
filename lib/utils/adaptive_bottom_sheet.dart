@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
 
 Future<T?> showAdaptiveBottomSheet<T>({
   required BuildContext context,
@@ -12,7 +12,7 @@ Future<T?> showAdaptiveBottomSheet<T>({
   bool isScrollControlled = true,
   bool useRootNavigator = true,
 }) {
-  if (FluffyThemes.isColumnMode(context)) {
+  if (ZazzyThemes.isColumnMode(context)) {
     return showDialog<T>(
       context: context,
       useRootNavigator: useRootNavigator,
@@ -55,7 +55,7 @@ Future<T?> showAdaptiveBottomSheet<T>({
     isScrollControlled: isScrollControlled,
     constraints: BoxConstraints(
       maxHeight: min(MediaQuery.of(context).size.height - 32, 600),
-      maxWidth: FluffyThemes.columnWidth * 1.25,
+      maxWidth: ZazzyThemes.columnWidth * 1.25,
     ),
     backgroundColor: Colors.transparent,
     clipBehavior: Clip.hardEdge,

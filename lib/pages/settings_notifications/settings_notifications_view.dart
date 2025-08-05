@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/settings_notifications/push_rule_extensions.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/settings_notifications/push_rule_extensions.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
 import '../../utils/localized_exception_extension.dart';
 import '../../widgets/matrix.dart';
 import 'settings_notifications.dart';
@@ -30,8 +30,8 @@ class SettingsNotificationsView extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: !FluffyThemes.isColumnMode(context),
-        centerTitle: FluffyThemes.isColumnMode(context),
+        automaticallyImplyLeading: !ZazzyThemes.isColumnMode(context),
+        centerTitle: ZazzyThemes.isColumnMode(context),
         title: Text(L10n.of(context).notifications),
       ),
       body: MaxWidthBody(

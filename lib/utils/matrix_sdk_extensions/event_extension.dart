@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:async/async.dart' as async;
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/utils/size_string.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/utils/size_string.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
 import 'matrix_file_extension.dart';
 
 extension LocalizedBody on Event {

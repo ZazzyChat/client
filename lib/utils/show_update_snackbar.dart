@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
 
 abstract class UpdateNotifier {
   static const String versionStoreKey = 'last_known_version';

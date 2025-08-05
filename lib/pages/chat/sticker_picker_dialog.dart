@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
-import 'package:wokytoky/widgets/mxc_image.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
+import 'package:zazzychat/widgets/mxc_image.dart';
 import '../../widgets/avatar.dart';
 
 class StickerPickerDialog extends StatefulWidget {
@@ -142,7 +142,7 @@ class StickerPickerDialogState extends State<StickerPickerDialog> {
                       OutlinedButton.icon(
                         onPressed: () => UrlLauncher(
                           context,
-                          'https://matrix.to/#/#fluffychat-stickers:janian.de',
+                          'https://matrix.to/#/#zazzychat-stickers:janian.de',
                         ).launchUrl(),
                         icon: const Icon(Icons.explore_outlined),
                         label: Text(L10n.of(context).discover),

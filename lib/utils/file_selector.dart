@@ -3,9 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:file_selector/file_selector.dart';
 
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/app_lock.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/app_lock.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
 
 Future<List<XFile>> selectFiles(
   BuildContext context, {

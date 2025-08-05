@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/setting_keys.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
-import 'package:wokytoky/widgets/matrix.dart';
-import 'package:wokytoky/widgets/settings_switch_list_tile.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/setting_keys.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/widgets/matrix.dart';
+import 'package:zazzychat/widgets/settings_switch_list_tile.dart';
 import 'settings_chat.dart';
 
 class SettingsChatView extends StatelessWidget {
@@ -23,8 +23,8 @@ class SettingsChatView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(L10n.of(context).chat),
-        automaticallyImplyLeading: !FluffyThemes.isColumnMode(context),
-        centerTitle: FluffyThemes.isColumnMode(context),
+        automaticallyImplyLeading: !ZazzyThemes.isColumnMode(context),
+        centerTitle: ZazzyThemes.isColumnMode(context),
       ),
       body: ListTileTheme(
         iconColor: theme.textTheme.bodyLarge!.color,

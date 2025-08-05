@@ -2,11 +2,11 @@ import 'package:flutter/material.dart' hide Visibility;
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat_access_settings/chat_access_settings_controller.dart';
-import 'package:wokytoky/utils/fluffy_share.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat_access_settings/chat_access_settings_controller.dart';
+import 'package:zazzychat/utils/zazzy_share.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
 
 class ChatAccessSettingsPageView extends StatelessWidget {
   final ChatAccessSettingsController controller;
@@ -184,7 +184,7 @@ class ChatAccessSettingsPageView extends StatelessWidget {
                   subtitle: SelectableText(room.id),
                   trailing: IconButton(
                     icon: const Icon(Icons.copy_outlined),
-                    onPressed: () => FluffyShare.share(room.id, context),
+                    onPressed: () => ZazzyShare.share(room.id, context),
                   ),
                 ),
                 ListTile(
@@ -234,7 +234,7 @@ class _AliasListTile extends StatelessWidget {
           ? const Icon(Icons.star)
           : const Icon(Icons.link_outlined),
       title: InkWell(
-        onTap: () => FluffyShare.share(
+        onTap: () => ZazzyShare.share(
           'https://matrix.to/#/$alias',
           context,
         ),

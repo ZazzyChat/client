@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat_list/chat_list.dart';
-import 'package:wokytoky/pages/chat_list/client_chooser_button.dart';
-import 'package:wokytoky/utils/sync_status_localization.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat_list/chat_list.dart';
+import 'package:zazzychat/pages/chat_list/client_chooser_button.dart';
+import 'package:zazzychat/utils/sync_status_localization.dart';
 import '../../widgets/matrix.dart';
 
 class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
@@ -27,7 +27,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
     return SliverAppBar(
       floating: true,
       toolbarHeight: 72,
-      pinned: FluffyThemes.isColumnMode(context),
+      pinned: ZazzyThemes.isColumnMode(context),
       scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
       automaticallyImplyLeading: false,

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/utils/room_status_extension.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/hover_builder.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/utils/room_status_extension.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/hover_builder.dart';
 import '../../config/themes.dart';
 import '../../utils/date_time_extension.dart';
 import '../../widgets/avatar.dart';
@@ -111,8 +111,8 @@ class ChatListItem extends StatelessWidget {
               onLongPress: () => onLongPress?.call(context),
               leading: HoverBuilder(
                 builder: (context, hovered) => AnimatedScale(
-                  duration: FluffyThemes.animationDuration,
-                  curve: FluffyThemes.animationCurve,
+                  duration: ZazzyThemes.animationDuration,
+                  curve: ZazzyThemes.animationCurve,
                   scale: hovered ? 1.1 : 1.0,
                   child: SizedBox(
                     width: Avatar.defaultSize,
@@ -175,8 +175,8 @@ class ChatListItem extends StatelessWidget {
                           child: GestureDetector(
                             onTap: () => onLongPress?.call(context),
                             child: AnimatedScale(
-                              duration: FluffyThemes.animationDuration,
-                              curve: FluffyThemes.animationCurve,
+                              duration: ZazzyThemes.animationDuration,
+                              curve: ZazzyThemes.animationCurve,
                               scale: listTileHovered ? 1.0 : 0.0,
                               child: Material(
                                 color: backgroundColor,
@@ -261,8 +261,8 @@ class ChatListItem extends StatelessWidget {
                     width: typingText.isEmpty ? 0 : 18,
                     clipBehavior: Clip.hardEdge,
                     decoration: const BoxDecoration(),
-                    duration: FluffyThemes.animationDuration,
-                    curve: FluffyThemes.animationCurve,
+                    duration: ZazzyThemes.animationDuration,
+                    curve: ZazzyThemes.animationCurve,
                     padding: const EdgeInsets.only(right: 4),
                     child: Icon(
                       Icons.edit_outlined,
@@ -346,8 +346,8 @@ class ChatListItem extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   AnimatedContainer(
-                    duration: FluffyThemes.animationDuration,
-                    curve: FluffyThemes.animationCurve,
+                    duration: ZazzyThemes.animationDuration,
+                    curve: ZazzyThemes.animationCurve,
                     alignment: Alignment.center,
                     padding: const EdgeInsets.symmetric(horizontal: 7),
                     height: unreadBubbleSize,

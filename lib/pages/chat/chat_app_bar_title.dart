@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/chat.dart';
-import 'package:wokytoky/utils/date_time_extension.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/utils/sync_status_localization.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/presence_builder.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/chat.dart';
+import 'package:zazzychat/utils/date_time_extension.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/utils/sync_status_localization.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/presence_builder.dart';
 
 class ChatAppBarTitle extends StatelessWidget {
   final ChatController controller;
@@ -33,7 +33,7 @@ class ChatAppBarTitle extends StatelessWidget {
       highlightColor: Colors.transparent,
       onTap: controller.isArchived
           ? null
-          : () => FluffyThemes.isThreeColumnMode(context)
+          : () => ZazzyThemes.isThreeColumnMode(context)
               ? controller.toggleDisplayChatDetailsColumn()
               : context.go('/rooms/${room.id}/details'),
       child: Row(
@@ -66,12 +66,12 @@ class ChatAppBarTitle extends StatelessWidget {
                   builder: (context, snapshot) {
                     final status = room.client.onSyncStatus.value ??
                         const SyncStatusUpdate(SyncStatus.waitingForResponse);
-                    final hide = FluffyThemes.isColumnMode(context) ||
+                    final hide = ZazzyThemes.isColumnMode(context) ||
                         (room.client.onSync.value != null &&
                             status.status != SyncStatus.error &&
                             room.client.prevBatch != null);
                     return AnimatedSize(
-                      duration: FluffyThemes.animationDuration,
+                      duration: ZazzyThemes.animationDuration,
                       child: hide
                           ? PresenceBuilder(
                               userId: room.directChatMatrixID,

@@ -1,4 +1,4 @@
-/*package chat.fluffy.fluffychat
+/*package chat.zazzy.chat
 
 import com.famedly.fcm_shared_isolate.FcmSharedIsolateService
 

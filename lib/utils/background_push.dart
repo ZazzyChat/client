@@ -1,21 +1,5 @@
-/*
- *   Famedly
- *   Copyright (C) 2020, 2021 Famedly GmbH
- *   Copyright (C) 2021 Fluffychat
- *
- *   This program is free software: you can redistribute it and/or modify
- *   it under the terms of the GNU Affero General Public License as
- *   published by the Free Software Foundation, either version 3 of the
- *   License, or (at your option) any later version.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- *   GNU Affero General Public License for more details.
- *
- *   You should have received a copy of the GNU Affero General Public License
- *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
+// background_push.dart
+// --------------------
 
 import 'dart:async';
 import 'dart:convert';
@@ -31,9 +15,9 @@ import 'package:matrix/matrix.dart';
 import 'package:unifiedpush/unifiedpush.dart';
 import 'package:unifiedpush_ui/unifiedpush_ui.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/push_helper.dart';
-import 'package:wokytoky/widgets/fluffy_chat_app.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/push_helper.dart';
+import 'package:zazzychat/widgets/zazzy_chat_app.dart';
 import '../config/app_config.dart';
 import '../config/setting_keys.dart';
 import '../widgets/matrix.dart';
@@ -337,7 +321,7 @@ class BackgroundPush {
             .waitForRoomInSync(roomId)
             .timeout(const Duration(seconds: 30));
       }
-      FluffyChatApp.router.go(
+      ZazzyChatApp.router.go(
         client.getRoomById(roomId)?.membership == Membership.invite
             ? '/rooms'
             : '/rooms/$roomId',

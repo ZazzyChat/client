@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
 
 class MaxWidthBody extends StatelessWidget {
   final Widget child;
@@ -23,7 +23,7 @@ class MaxWidthBody extends StatelessWidget {
         builder: (context, constraints) {
           final theme = Theme.of(context);
 
-          const desiredWidth = FluffyThemes.columnWidth * 1.5;
+          const desiredWidth = ZazzyThemes.columnWidth * 1.5;
           final body = constraints.maxWidth <= desiredWidth
               ? child
               : Container(
@@ -31,7 +31,7 @@ class MaxWidthBody extends StatelessWidget {
                   padding: const EdgeInsets.all(32),
                   child: ConstrainedBox(
                     constraints: const BoxConstraints(
-                      maxWidth: FluffyThemes.columnWidth * 1.5,
+                      maxWidth: ZazzyThemes.columnWidth * 1.5,
                     ),
                     child: Material(
                       shape: RoundedRectangleBorder(

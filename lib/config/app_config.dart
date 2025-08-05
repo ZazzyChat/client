@@ -1,55 +1,54 @@
 import 'dart:ui';
-
 import 'package:matrix/matrix.dart';
 
 abstract class AppConfig {
-  static String _applicationName = 'FluffyChat';
-
-  static String get applicationName => _applicationName;
-  static String? _applicationWelcomeMessage;
-
-  static String? get applicationWelcomeMessage => _applicationWelcomeMessage;
-  static String _defaultHomeserver = 'matrix.org';
-
-  static String get defaultHomeserver => _defaultHomeserver;
-  static double fontSizeFactor = 1;
-  static const Color chatColor = primaryColor;
-  static Color? colorSchemeSeed = primaryColor;
-  static const double messageFontSize = 16.0;
-  static const bool allowOtherHomeservers = true;
-  static const bool enableRegistration = true;
   static const Color primaryColor = Color(0xFF5625BA);
   static const Color primaryColorLight = Color(0xFFCCBDEA);
   static const Color secondaryColor = Color(0xFF41a2bc);
-  static String _privacyUrl =
-      'https://github.com/krille-chan/fluffychat/blob/main/PRIVACY.md';
+  static const Color chatColor = primaryColor;
+  static Color? colorSchemeSeed = primaryColor;
+
+  static String _applicationName = 'ZazzyChat';
+  static String? _applicationWelcomeMessage;
+  static String _defaultHomeserver = 'https://zazzy.chat:12345';
+  static String _privacyUrl = 'https://zazzy.chat/privacy';
+  static String _webBaseUrl = ''; // TODO: подключить веб-клиент или удалить
+
+  static double fontSizeFactor = 1;
+  static const double messageFontSize = 16.0;
+  static const bool allowOtherHomeservers = true;
+  static const bool enableRegistration = true;
 
   static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
 
+  static String get applicationName => _applicationName;
+  static String? get applicationWelcomeMessage => _applicationWelcomeMessage;
+  static String get defaultHomeserver => _defaultHomeserver;
   static String get privacyUrl => _privacyUrl;
-  static const String website = 'https://fluffychat.im';
-  static const String enablePushTutorial =
-      'https://github.com/krille-chan/fluffychat/wiki/Push-Notifications-without-Google-Services';
-  static const String encryptionTutorial =
-      'https://github.com/krille-chan/fluffychat/wiki/How-to-use-end-to-end-encryption-in-FluffyChat';
-  static const String startChatTutorial =
-      'https://github.com/krille-chan/fluffychat/wiki/How-to-Find-Users-in-FluffyChat';
-  static const String appId = 'im.fluffychat.FluffyChat';
-  static const String appOpenUrlScheme = 'im.fluffychat';
-  static String _webBaseUrl = 'https://fluffychat.im/web';
-
   static String get webBaseUrl => _webBaseUrl;
-  static const String sourceCodeUrl =
-      'https://github.com/krille-chan/fluffychat';
-  static const String supportUrl =
-      'https://github.com/krille-chan/fluffychat/issues';
-  static const String changelogUrl =
-      'https://github.com/krille-chan/fluffychat/blob/main/CHANGELOG.md';
+
+  static const String website = 'https://zazzy.chat';
+
+  static const String enablePushTutorial =
+      'https://github.com/ZazzyChat/wiki/Push-Notifications-without-Google-Services';
+  static const String encryptionTutorial =
+      'https://github.com/ZazzyChat/wiki/How-to-use-end-to-end-encryption-in-ZazzyChat';
+  static const String startChatTutorial =
+      'https://github.com/ZazzyChat/wiki/How-to-Find-Users-in-ZazzyChat';
+
+  static const String appId = 'chat.zazzychat.client';
+  static const String appOpenUrlScheme = 'chat.zazzychat';
+
+  static const String sourceCodeUrl = 'https://github.com/ZazzyChat';
+  static const String supportUrl = 'https://github.com/ZazzyChat/client/issues';
+  static const String changelogUrl = 'https://github.com/ZazzyChat/client/blob/main/CHANGELOG.md';
+
   static final Uri newIssueUrl = Uri(
     scheme: 'https',
     host: 'github.com',
-    path: '/krille-chan/fluffychat/issues/new',
+    path: '/ZazzyChat/client/issues/new',
   );
+
   static bool renderHtml = true;
   static bool hideRedactedEvents = false;
   static bool hideUnknownEvents = true;
@@ -62,14 +61,18 @@ abstract class AppConfig {
   static bool showPresences = true;
   static bool displayNavigationRail = false;
   static bool experimentalVoip = false;
+
   static const bool hideTypingUsernames = false;
+
   static const String inviteLinkPrefix = 'https://matrix.to/#/';
-  static const String deepLinkPrefix = 'im.fluffychat://chat/';
+  static const String deepLinkPrefix = 'chat.zazzychat://chat/';
   static const String schemePrefix = 'matrix:';
-  static const String pushNotificationsChannelId = 'fluffychat_push';
-  static const String pushNotificationsAppId = 'chat.fluffy.fluffychat';
+  static const String pushNotificationsChannelId = 'zazzychat_push';
+  static const String pushNotificationsAppId = 'chat.zazzy.chat';
+
   static const double borderRadius = 18.0;
   static const double columnWidth = 360.0;
+
   static final Uri homeserverList = Uri(
     scheme: 'https',
     host: 'servers.joinmatrix.org',

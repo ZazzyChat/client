@@ -9,10 +9,10 @@ import 'package:path_provider/path_provider.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:video_player/video_player.dart';
 
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/event_extension.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/blur_hash.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/blur_hash.dart';
 import '../../../utils/error_reporter.dart';
 import '../../widgets/mxc_image.dart';
 

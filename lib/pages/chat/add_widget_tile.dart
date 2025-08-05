@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/add_widget_tile_view.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/add_widget_tile_view.dart';
 
 class AddWidgetTile extends StatefulWidget {
   final Room room;

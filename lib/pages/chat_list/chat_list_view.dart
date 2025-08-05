@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat_list/chat_list.dart';
-import 'package:wokytoky/widgets/navigation_rail.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat_list/chat_list.dart';
+import 'package:zazzychat/widgets/navigation_rail.dart';
 import 'chat_list_body.dart';
 
 class ChatListView extends StatelessWidget {
@@ -31,7 +31,7 @@ class ChatListView extends StatelessWidget {
       },
       child: Row(
         children: [
-          if (FluffyThemes.isColumnMode(context) ||
+          if (ZazzyThemes.isColumnMode(context) ||
               AppConfig.displayNavigationRail) ...[
             SpacesNavigationRail(
               activeSpaceId: controller.activeSpaceId,

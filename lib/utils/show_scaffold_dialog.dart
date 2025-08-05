@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
 
 Future<T?> showScaffoldDialog<T>({
   required BuildContext context,
@@ -14,7 +14,7 @@ Future<T?> showScaffoldDialog<T>({
     showDialog<T>(
       context: context,
       useSafeArea: false,
-      builder: FluffyThemes.isColumnMode(context)
+      builder: ZazzyThemes.isColumnMode(context)
           ? (context) => Center(
                 child: Container(
                   decoration: BoxDecoration(

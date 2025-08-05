@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/setting_keys.dart';
-import 'package:wokytoky/utils/account_config.dart';
-import 'package:wokytoky/utils/file_selector.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/theme_builder.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/setting_keys.dart';
+import 'package:zazzychat/utils/account_config.dart';
+import 'package:zazzychat/utils/file_selector.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/theme_builder.dart';
 import '../../widgets/matrix.dart';
 import 'settings_style_view.dart';
 

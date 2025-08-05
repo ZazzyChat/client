@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_modal_action_popup.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_modal_action_popup.dart';
 import '../../utils/date_time_extension.dart';
 import '../../utils/matrix_sdk_extensions/device_extension.dart';
 import '../../widgets/matrix.dart';

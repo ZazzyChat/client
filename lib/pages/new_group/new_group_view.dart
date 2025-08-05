@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/new_group/new_group.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/new_group/new_group.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
 
 class NewGroupView extends StatelessWidget {
   final NewGroupController controller;
@@ -100,8 +100,8 @@ class NewGroupView extends StatelessWidget {
               onChanged: controller.loading ? null : controller.setPublicGroup,
             ),
             AnimatedSize(
-              duration: FluffyThemes.animationDuration,
-              curve: FluffyThemes.animationCurve,
+              duration: ZazzyThemes.animationDuration,
+              curve: ZazzyThemes.animationCurve,
               child: controller.publicGroup
                   ? SwitchListTile.adaptive(
                       contentPadding:
@@ -116,8 +116,8 @@ class NewGroupView extends StatelessWidget {
                   : const SizedBox.shrink(),
             ),
             AnimatedSize(
-              duration: FluffyThemes.animationDuration,
-              curve: FluffyThemes.animationCurve,
+              duration: ZazzyThemes.animationDuration,
+              curve: ZazzyThemes.animationCurve,
               child: controller.createGroupType == CreateGroupType.space
                   ? const SizedBox.shrink()
                   : SwitchListTile.adaptive(
@@ -138,8 +138,8 @@ class NewGroupView extends StatelessWidget {
                     ),
             ),
             AnimatedSize(
-              duration: FluffyThemes.animationDuration,
-              curve: FluffyThemes.animationCurve,
+              duration: ZazzyThemes.animationDuration,
+              curve: ZazzyThemes.animationCurve,
               child: controller.createGroupType == CreateGroupType.space
                   ? ListTile(
                       contentPadding:
@@ -170,8 +170,8 @@ class NewGroupView extends StatelessWidget {
               ),
             ),
             AnimatedSize(
-              duration: FluffyThemes.animationDuration,
-              curve: FluffyThemes.animationCurve,
+              duration: ZazzyThemes.animationDuration,
+              curve: ZazzyThemes.animationCurve,
               child: error == null
                   ? const SizedBox.shrink()
                   : ListTile(

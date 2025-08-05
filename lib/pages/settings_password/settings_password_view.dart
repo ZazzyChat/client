@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/settings_password/settings_password.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/settings_password/settings_password.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
 
 class SettingsPasswordView extends StatelessWidget {
   final SettingsPasswordController controller;

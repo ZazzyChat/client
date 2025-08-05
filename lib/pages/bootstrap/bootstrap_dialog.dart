@@ -4,14 +4,14 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:matrix/encryption.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/error_reporter.dart';
-import 'package:wokytoky/utils/fluffy_share.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/error_reporter.dart';
+import 'package:zazzychat/utils/zazzy_share.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
 import '../../utils/adaptive_bottom_sheet.dart';
 import '../key_verification/key_verification_dialog.dart';
 
@@ -110,7 +110,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
         body: Center(
           child: ConstrainedBox(
             constraints:
-                const BoxConstraints(maxWidth: FluffyThemes.columnWidth * 1.5),
+                const BoxConstraints(maxWidth: ZazzyThemes.columnWidth * 1.5),
             child: ListView(
               padding: const EdgeInsets.all(16.0),
               children: [
@@ -161,7 +161,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
                   value: _recoveryKeyCopied,
                   activeColor: theme.colorScheme.primary,
                   onChanged: (b) {
-                    FluffyShare.share(key!, context);
+                    ZazzyShare.share(key!, context);
                     setState(() => _recoveryKeyCopied = true);
                   },
                   title: Text(L10n.of(context).copyToClipboard),
@@ -232,7 +232,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
             body: Center(
               child: ConstrainedBox(
                 constraints: const BoxConstraints(
-                  maxWidth: FluffyThemes.columnWidth * 1.5,
+                  maxWidth: ZazzyThemes.columnWidth * 1.5,
                 ),
                 child: ListView(
                   padding: const EdgeInsets.all(16.0),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat_search/chat_search_files_tab.dart';
-import 'package:wokytoky/pages/chat_search/chat_search_images_tab.dart';
-import 'package:wokytoky/pages/chat_search/chat_search_message_tab.dart';
-import 'package:wokytoky/pages/chat_search/chat_search_page.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat_search/chat_search_files_tab.dart';
+import 'package:zazzychat/pages/chat_search/chat_search_images_tab.dart';
+import 'package:zazzychat/pages/chat_search/chat_search_message_tab.dart';
+import 'package:zazzychat/pages/chat_search/chat_search_page.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
 
 class ChatSearchView extends StatelessWidget {
   final ChatSearchController controller;
@@ -45,7 +45,7 @@ class ChatSearchView extends StatelessWidget {
         withScrolling: false,
         child: Column(
           children: [
-            if (FluffyThemes.isThreeColumnMode(context))
+            if (ZazzyThemes.isThreeColumnMode(context))
               const SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.symmetric(

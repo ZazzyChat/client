@@ -3,17 +3,17 @@ import 'dart:async';
 import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_text_input_dialog.dart';
-import 'package:wokytoky/widgets/fluffy_chat_app.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
+import 'package:zazzychat/widgets/zazzy_chat_app.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 extension UiaRequestManager on MatrixState {
   Future uiaRequestHandler(UiaRequest uiaRequest) async {
     final l10n = L10n.of(context);
     final navigatorContext =
-        FluffyChatApp.router.routerDelegate.navigatorKey.currentContext ??
+        ZazzyChatApp.router.routerDelegate.navigatorKey.currentContext ??
             context;
     try {
       if (uiaRequest.state != UiaRequestState.waitForUser ||

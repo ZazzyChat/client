@@ -999,7 +999,7 @@
     }
   },
   "@callingPermissions": {},
-  "@newMessageInFluffyChat": {
+  "@newMessageInZazzyChat": {
     "type": "String",
     "placeholders": {}
   },
@@ -1458,7 +1458,7 @@
     "placeholders": {}
   },
   "@unverified": {},
-  "@fluffychat": {
+  "@zazzychat": {
     "type": "String",
     "placeholders": {}
   },

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/settings_password/settings_password_view.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/settings_password/settings_password_view.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class SettingsPassword extends StatefulWidget {
   const SettingsPassword({super.key});

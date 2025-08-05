@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/pages/chat/chat.dart';
-import 'package:wokytoky/pages/chat/events/message.dart';
-import 'package:wokytoky/pages/chat/seen_by_row.dart';
-import 'package:wokytoky/pages/chat/typing_indicators.dart';
-import 'package:wokytoky/utils/account_config.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/filtered_timeline_extension.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/pages/chat/chat.dart';
+import 'package:zazzychat/pages/chat/events/message.dart';
+import 'package:zazzychat/pages/chat/seen_by_row.dart';
+import 'package:zazzychat/pages/chat/typing_indicators.dart';
+import 'package:zazzychat/utils/account_config.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/filtered_timeline_extension.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
 
 class ChatEventList extends StatelessWidget {
   final ChatController controller;
@@ -34,7 +34,7 @@ class ChatEventList extends StatelessWidget {
       theme.bubbleColor,
     ];
 
-    final horizontalPadding = FluffyThemes.isColumnMode(context) ? 8.0 : 0.0;
+    final horizontalPadding = ZazzyThemes.isColumnMode(context) ? 8.0 : 0.0;
 
     final events = timeline.events.filterByVisibleInGui();
     final animateInEventIndex = controller.animateInEventIndex;

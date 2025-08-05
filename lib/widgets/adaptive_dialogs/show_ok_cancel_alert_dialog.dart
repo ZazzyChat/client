@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_linkify/flutter_linkify.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
 
 enum OkCancelResult { ok, cancel }
 

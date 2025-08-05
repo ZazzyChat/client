@@ -9,10 +9,10 @@ import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart' as parser;
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/utils/event_checkbox_extension.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/mxc_image.dart';
+import 'package:zazzychat/utils/event_checkbox_extension.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/mxc_image.dart';
 import '../../../utils/url_launcher.dart';
 
 class HtmlMessage extends StatelessWidget {
@@ -86,7 +86,7 @@ class HtmlMessage extends StatelessWidget {
     'rt',
     'html',
     'body',
-    // Workaround for https://github.com/krille-chan/fluffychat/issues/507
+    // Workaround for https://github.com/krille-chan/zazzychat/issues/507
     'tg-forward',
   };
 

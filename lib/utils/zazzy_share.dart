@@ -3,11 +3,11 @@ import 'package:flutter/services.dart';
 
 import 'package:share_plus/share_plus.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
 import '../widgets/matrix.dart';
 
-abstract class FluffyShare {
+abstract class ZazzyShare {
   static Future<void> share(
     String text,
     BuildContext context, {
@@ -33,10 +33,10 @@ abstract class FluffyShare {
   static Future<void> shareInviteLink(BuildContext context) async {
     final client = Matrix.of(context).client;
     final ownProfile = await client.fetchOwnProfile();
-    await FluffyShare.share(
+    await ZazzyShare.share(
       L10n.of(context).inviteText(
         ownProfile.displayName ?? client.userID!,
-        'https://matrix.to/#/${client.userID}?client=im.fluffychat',
+        'https://matrix.to/#/${client.userID}?client=im.zazzychat',
       ),
       context,
     );

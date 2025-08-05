@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/device_settings/device_settings.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/device_settings/device_settings.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
 import 'user_device_list_item.dart';
 
 class DevicesSettingsView extends StatelessWidget {
@@ -15,8 +15,8 @@ class DevicesSettingsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: !FluffyThemes.isColumnMode(context),
-        centerTitle: FluffyThemes.isColumnMode(context),
+        automaticallyImplyLeading: !ZazzyThemes.isColumnMode(context),
+        centerTitle: ZazzyThemes.isColumnMode(context),
         title: Text(L10n.of(context).devices),
       ),
       body: MaxWidthBody(

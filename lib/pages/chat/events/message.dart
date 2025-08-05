@@ -7,16 +7,16 @@ import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:matrix/matrix.dart';
 import 'package:swipe_to_action/swipe_to_action.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/events/room_creation_state_event.dart';
-import 'package:wokytoky/utils/adaptive_bottom_sheet.dart';
-import 'package:wokytoky/utils/date_time_extension.dart';
-import 'package:wokytoky/utils/file_description.dart';
-import 'package:wokytoky/utils/string_color.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/matrix.dart';
-import 'package:wokytoky/widgets/member_actions_popup_menu_button.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/events/room_creation_state_event.dart';
+import 'package:zazzychat/utils/adaptive_bottom_sheet.dart';
+import 'package:zazzychat/utils/date_time_extension.dart';
+import 'package:zazzychat/utils/file_description.dart';
+import 'package:zazzychat/utils/string_color.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/matrix.dart';
+import 'package:zazzychat/widgets/member_actions_popup_menu_button.dart';
 import '../../../config/app_config.dart';
 import 'message_content.dart';
 import 'message_reactions.dart';
@@ -210,7 +210,7 @@ class Message extends StatelessWidget {
         onSwipe: (_) => onSwipe(),
         child: Container(
           constraints: const BoxConstraints(
-            maxWidth: FluffyThemes.maxTimelineWidth,
+            maxWidth: ZazzyThemes.maxTimelineWidth,
           ),
           padding: EdgeInsets.only(
             left: 8.0,
@@ -262,8 +262,8 @@ class Message extends StatelessWidget {
                     });
                   }
                   return AnimatedSize(
-                    duration: FluffyThemes.animationDuration,
-                    curve: FluffyThemes.animationCurve,
+                    duration: ZazzyThemes.animationDuration,
+                    curve: ZazzyThemes.animationCurve,
                     clipBehavior: Clip.none,
                     alignment: ownMessage
                         ? Alignment.bottomRight
@@ -447,10 +447,10 @@ class Message extends StatelessWidget {
                                                           event.status.isSending
                                                       ? 0.5
                                                       : 1,
-                                              duration: FluffyThemes
+                                              duration: ZazzyThemes
                                                   .animationDuration,
                                               curve:
-                                                  FluffyThemes.animationCurve,
+                                                  ZazzyThemes.animationCurve,
                                               child: Container(
                                                 decoration: BoxDecoration(
                                                   color: noBubble
@@ -476,7 +476,7 @@ class Message extends StatelessWidget {
                                                     ),
                                                     constraints:
                                                         const BoxConstraints(
-                                                      maxWidth: FluffyThemes
+                                                      maxWidth: ZazzyThemes
                                                               .columnWidth *
                                                           1.5,
                                                     ),
@@ -643,8 +643,8 @@ class Message extends StatelessWidget {
                                               : Alignment.bottomLeft,
                                           child: AnimatedSize(
                                             duration:
-                                                FluffyThemes.animationDuration,
-                                            curve: FluffyThemes.animationCurve,
+                                                ZazzyThemes.animationDuration,
+                                            curve: ZazzyThemes.animationCurve,
                                             child: showReactionPicker
                                                 ? Padding(
                                                     padding:
@@ -850,8 +850,8 @@ class Message extends StatelessWidget {
                 },
               ),
               AnimatedSize(
-                duration: FluffyThemes.animationDuration,
-                curve: FluffyThemes.animationCurve,
+                duration: ZazzyThemes.animationDuration,
+                curve: ZazzyThemes.animationCurve,
                 alignment: Alignment.bottomCenter,
                 child: !showReceiptsRow
                     ? const SizedBox.shrink()

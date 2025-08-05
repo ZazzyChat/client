@@ -4,16 +4,16 @@ import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/new_private_chat/new_private_chat.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/new_private_chat/new_private_chat.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../widgets/qr_code_viewer.dart';
 
 class NewPrivateChatView extends StatelessWidget {
@@ -100,7 +100,7 @@ class NewPrivateChatView extends StatelessWidget {
             ),
             Expanded(
               child: AnimatedCrossFade(
-                duration: FluffyThemes.animationDuration,
+                duration: ZazzyThemes.animationDuration,
                 crossFadeState: searchResponse == null
                     ? CrossFadeState.showFirst
                     : CrossFadeState.showSecond,

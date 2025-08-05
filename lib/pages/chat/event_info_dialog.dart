@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/adaptive_bottom_sheet.dart';
-import 'package:wokytoky/utils/date_time_extension.dart';
-import 'package:wokytoky/widgets/avatar.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/adaptive_bottom_sheet.dart';
+import 'package:zazzychat/utils/date_time_extension.dart';
+import 'package:zazzychat/widgets/avatar.dart';
 
 extension EventInfoDialogExtension on Event {
   void showInfoDialog(BuildContext context) => showAdaptiveBottomSheet(

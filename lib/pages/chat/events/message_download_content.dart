@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/utils/file_description.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/event_extension.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/utils/file_description.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
 
 class MessageDownloadContent extends StatelessWidget {
   final Event event;

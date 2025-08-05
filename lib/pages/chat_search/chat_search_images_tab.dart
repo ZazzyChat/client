@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/events/video_player.dart';
-import 'package:wokytoky/pages/image_viewer/image_viewer.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/widgets/mxc_image.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/events/video_player.dart';
+import 'package:zazzychat/pages/image_viewer/image_viewer.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/widgets/mxc_image.dart';
 
 class ChatSearchImagesTab extends StatelessWidget {
   final Room room;

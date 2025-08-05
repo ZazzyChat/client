@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/other_party_can_receive.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/other_party_can_receive.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../config/themes.dart';
 import 'chat.dart';
 import 'input_bar.dart';
@@ -114,8 +114,8 @@ class ChatInputRow extends StatelessWidget {
           : <Widget>[
               const SizedBox(width: 4),
               AnimatedContainer(
-                duration: FluffyThemes.animationDuration,
-                curve: FluffyThemes.animationCurve,
+                duration: ZazzyThemes.animationDuration,
+                curve: ZazzyThemes.animationCurve,
                 width: controller.sendController.text.isNotEmpty ? 0 : height,
                 height: height,
                 alignment: Alignment.center,
@@ -183,8 +183,8 @@ class ChatInputRow extends StatelessWidget {
               ),
               if (PlatformInfos.isMobile)
                 AnimatedContainer(
-                  duration: FluffyThemes.animationDuration,
-                  curve: FluffyThemes.animationCurve,
+                  duration: ZazzyThemes.animationDuration,
+                  curve: ZazzyThemes.animationCurve,
                   width: controller.sendController.text.isNotEmpty ? 0 : height,
                   height: height,
                   alignment: Alignment.center,

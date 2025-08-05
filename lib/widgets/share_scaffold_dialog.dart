@@ -4,12 +4,12 @@ import 'package:cross_file/cross_file.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 abstract class ShareItem {}
 
@@ -157,8 +157,8 @@ class _ShareScaffoldDialogState extends State<ShareScaffoldDialog> {
         ],
       ),
       bottomNavigationBar: AnimatedSize(
-        duration: FluffyThemes.animationDuration,
-        curve: FluffyThemes.animationCurve,
+        duration: ZazzyThemes.animationDuration,
+        curve: ZazzyThemes.animationCurve,
         child: selectedRoomId == null
             ? const SizedBox.shrink()
             : Material(

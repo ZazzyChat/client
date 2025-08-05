@@ -9,14 +9,14 @@ import 'package:image/image.dart';
 import 'package:matrix/matrix.dart';
 import 'package:universal_html/html.dart' as html;
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/client_download_content_extension.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/push_helper.dart';
-import 'package:wokytoky/widgets/fluffy_chat_app.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/client_download_content_extension.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/push_helper.dart';
+import 'package:zazzychat/widgets/zazzy_chat_app.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 extension LocalNotificationsExtension on MatrixState {
   static final html.AudioElement _audioPlayer = html.AudioElement()
@@ -113,7 +113,7 @@ extension LocalNotificationsExtension on MatrixState {
         body: body,
         replacesId: linuxNotificationIds[roomId] ?? 0,
         appName: AppConfig.applicationName,
-        appIcon: 'fluffychat',
+        appIcon: 'zazzychat',
         actions: [
           NotificationAction(
             DesktopNotificationActions.openChat.name,
@@ -141,7 +141,7 @@ extension LocalNotificationsExtension on MatrixState {
             );
             break;
           case DesktopNotificationActions.openChat:
-            FluffyChatApp.router.go('/rooms/${event.room.id}');
+            ZazzyChatApp.router.go('/rooms/${event.room.id}');
             break;
         }
       });

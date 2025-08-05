@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/invitation_selection/invitation_selection_view.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/invitation_selection/invitation_selection_view.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../utils/localized_exception_extension.dart';
 
 class InvitationSelection extends StatefulWidget {

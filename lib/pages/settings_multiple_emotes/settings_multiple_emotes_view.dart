@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/settings_multiple_emotes/settings_multiple_emotes.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/settings_multiple_emotes/settings_multiple_emotes.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class MultipleEmotesSettingsView extends StatelessWidget {
   final MultipleEmotesSettingsController controller;

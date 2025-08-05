@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/themes.dart';
+import 'package:zazzychat/config/themes.dart';
 
 class TwoColumnLayout extends StatelessWidget {
   final Widget mainView;
@@ -22,7 +22,7 @@ class TwoColumnLayout extends StatelessWidget {
             Container(
               clipBehavior: Clip.antiAlias,
               decoration: const BoxDecoration(),
-              width: FluffyThemes.columnWidth + FluffyThemes.navRailWidth,
+              width: ZazzyThemes.columnWidth + ZazzyThemes.navRailWidth,
               child: mainView,
             ),
             Container(

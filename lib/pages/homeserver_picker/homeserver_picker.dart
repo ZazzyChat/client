@@ -12,15 +12,15 @@ import 'package:matrix/matrix.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/file_selector.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/file_selector.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../utils/localized_exception_extension.dart';
 
-import 'package:wokytoky/utils/tor_stub.dart'
+import 'package:zazzychat/utils/tor_stub.dart'
     if (dart.library.html) 'package:tor_detector_web/tor_detector_web.dart';
 
 class HomeserverPicker extends StatefulWidget {
@@ -70,7 +70,7 @@ class HomeserverPickerController extends State<HomeserverPicker> {
     });
 
     final l10n = L10n.of(context);
-    final homeserver = Uri.https('woky.to', '');
+    final homeserver = Uri.https('zazzy.chat', '');
 
     try {
       final client = await Matrix.of(context).getLoginClient();
@@ -82,7 +82,7 @@ class HomeserverPickerController extends State<HomeserverPicker> {
         if (!PlatformInfos.isMobile) {
           final consent = await showOkCancelAlertDialog(
             context: context,
-            title: l10n.appWantsToUseForLogin('woky.to'),
+            title: l10n.appWantsToUseForLogin('zazzy.chat'),
             message: l10n.appWantsToUseForLoginDescription,
             okLabel: l10n.continueText,
           );

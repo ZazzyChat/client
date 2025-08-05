@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
 import '../../config/themes.dart';
 import 'chat.dart';
 import 'events/reply_content.dart';
@@ -17,8 +17,8 @@ class ReplyDisplay extends StatelessWidget {
     final theme = Theme.of(context);
 
     return AnimatedContainer(
-      duration: FluffyThemes.animationDuration,
-      curve: FluffyThemes.animationCurve,
+      duration: ZazzyThemes.animationDuration,
+      curve: ZazzyThemes.animationCurve,
       height: controller.editEvent != null || controller.replyEvent != null
           ? 56
           : 0,

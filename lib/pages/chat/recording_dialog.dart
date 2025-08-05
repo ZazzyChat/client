@@ -9,11 +9,11 @@ import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/setting_keys.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/setting_keys.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import 'events/audio_player.dart';
 
 class RecordingDialog extends StatefulWidget {

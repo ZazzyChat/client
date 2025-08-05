@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/widgets/hover_builder.dart';
-import 'package:wokytoky/widgets/unread_rooms_badge.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/widgets/hover_builder.dart';
+import 'package:zazzychat/widgets/unread_rooms_badge.dart';
 import '../../config/themes.dart';
 
 class NaviRailItem extends StatelessWidget {
@@ -36,7 +36,7 @@ class NaviRailItem extends StatelessWidget {
       builder: (context, hovered) {
         return SizedBox(
           height: 72,
-          width: FluffyThemes.navRailWidth,
+          width: ZazzyThemes.navRailWidth,
           child: Stack(
             children: [
               Positioned(
@@ -45,12 +45,12 @@ class NaviRailItem extends StatelessWidget {
                 left: 0,
                 child: AnimatedContainer(
                   width: isSelected
-                      ? FluffyThemes.isColumnMode(context)
+                      ? ZazzyThemes.isColumnMode(context)
                           ? 8
                           : 4
                       : 0,
-                  duration: FluffyThemes.animationDuration,
-                  curve: FluffyThemes.animationCurve,
+                  duration: ZazzyThemes.animationDuration,
+                  curve: ZazzyThemes.animationCurve,
                   decoration: BoxDecoration(
                     color: theme.colorScheme.primary,
                     borderRadius: const BorderRadius.only(
@@ -63,8 +63,8 @@ class NaviRailItem extends StatelessWidget {
               Center(
                 child: AnimatedScale(
                   scale: hovered ? 1.1 : 1.0,
-                  duration: FluffyThemes.animationDuration,
-                  curve: FluffyThemes.animationCurve,
+                  duration: ZazzyThemes.animationDuration,
+                  curve: ZazzyThemes.animationCurve,
                   child: Material(
                     borderRadius: borderRadius,
                     color: isSelected

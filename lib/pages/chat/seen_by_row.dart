@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/pages/chat/chat.dart';
-import 'package:wokytoky/utils/room_status_extension.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/pages/chat/chat.dart';
+import 'package:zazzychat/utils/room_status_extension.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class SeenByRow extends StatelessWidget {
   final ChatController controller;
@@ -21,12 +21,12 @@ class SeenByRow extends StatelessWidget {
       alignment: Alignment.center,
       child: AnimatedContainer(
         constraints:
-            const BoxConstraints(maxWidth: FluffyThemes.maxTimelineWidth),
+            const BoxConstraints(maxWidth: ZazzyThemes.maxTimelineWidth),
         height: seenByUsers.isEmpty ? 0 : 24,
         duration: seenByUsers.isEmpty
             ? Duration.zero
-            : FluffyThemes.animationDuration,
-        curve: FluffyThemes.animationCurve,
+            : ZazzyThemes.animationDuration,
+        curve: ZazzyThemes.animationCurve,
         alignment: controller.timeline!.events.isNotEmpty &&
                 controller.timeline!.events.first.senderId ==
                     Matrix.of(context).client.userID

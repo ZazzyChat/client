@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import 'package:async/async.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
 
 /// Displays a loading dialog which reacts to the given [future]. The dialog
 /// will be dismissed and the value will be returned when the future completes.

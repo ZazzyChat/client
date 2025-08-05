@@ -1,5 +1,5 @@
-//import 'package:wokytoky/pages/homeserver_picker.dart';
-//import 'package:wokytoky/main.dart';
+//import 'package:zazzychat/pages/homeserver_picker.dart';
+//import 'package:zazzychat/main.dart';
 
 import 'package:flutter_test/flutter_test.dart';
 
@@ -8,7 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   testWidgets('Test if the widget can be created', (WidgetTester tester) async {
     /*await tester.pumpWidget(
-      FluffyChatApp(
+      ZazzyChatApp(
         client: await prepareTestClient(),
         testWidget: HomeserverPicker(),
       ),

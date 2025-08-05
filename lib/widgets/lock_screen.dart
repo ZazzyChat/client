@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/widgets/app_lock.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/widgets/app_lock.dart';
 
 class LockScreen extends StatefulWidget {
   const LockScreen({super.key});
@@ -71,7 +71,7 @@ class _LockScreenState extends State<LockScreen> {
           padding: const EdgeInsets.all(16.0),
           child: ConstrainedBox(
             constraints: const BoxConstraints(
-              maxWidth: FluffyThemes.columnWidth,
+              maxWidth: ZazzyThemes.columnWidth,
             ),
             child: ListView(
               shrinkWrap: true,

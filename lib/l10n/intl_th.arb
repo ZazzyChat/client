@@ -158,8 +158,8 @@
       }
     }
   },
-  "fluffychat": "FluffyChat",
-  "@fluffychat": {
+  "zazzychat": "ZazzyChat",
+  "@zazzychat": {
     "type": "String",
     "placeholders": {}
   },
@@ -1094,7 +1094,7 @@
     }
   },
   "@callingPermissions": {},
-  "@newMessageInFluffyChat": {
+  "@newMessageInZazzyChat": {
     "type": "String",
     "placeholders": {}
   },

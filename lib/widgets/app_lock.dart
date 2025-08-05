@@ -4,8 +4,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:matrix/matrix.dart';
 import 'package:provider/provider.dart';
 
-import 'package:wokytoky/config/setting_keys.dart';
-import 'package:wokytoky/widgets/lock_screen.dart';
+import 'package:zazzychat/config/setting_keys.dart';
+import 'package:zazzychat/widgets/lock_screen.dart';
 
 class AppLockWidget extends StatefulWidget {
   const AppLockWidget({

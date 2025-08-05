@@ -1,3 +1,6 @@
+// audio_player.dart
+// -------------------------
+
 import 'dart:async';
 import 'dart:io';
 
@@ -11,14 +14,14 @@ import 'package:matrix/matrix.dart';
 import 'package:opus_caf_converter_dart/opus_caf_converter_dart.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/utils/error_reporter.dart';
-import 'package:wokytoky/utils/file_description.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/utils/error_reporter.dart';
+import 'package:zazzychat/utils/file_description.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
 import '../../../utils/matrix_sdk_extensions/event_extension.dart';
-import '../../../widgets/fluffy_chat_app.dart';
+import '../../../widgets/zazzy_chat_app.dart';
 import '../../../widgets/matrix.dart';
 
 class AudioPlayerWidget extends StatefulWidget {
@@ -84,7 +87,7 @@ class AudioPlayerState extends State<AudioPlayerWidget> {
               content: StreamBuilder(
                 stream: audioPlayer.positionStream.asBroadcastStream(),
                 builder: (context, _) => GestureDetector(
-                  onTap: () => FluffyChatApp.router.go(
+                  onTap: () => ZazzyChatApp.router.go(
                     '/rooms/${widget.event.room.id}?event=${widget.event.eventId}',
                   ),
                   child: Text(
@@ -308,7 +311,7 @@ class AudioPlayerState extends State<AudioPlayerWidget> {
                 children: [
                   ConstrainedBox(
                     constraints: const BoxConstraints(
-                      maxWidth: FluffyThemes.columnWidth,
+                      maxWidth: ZazzyThemes.columnWidth,
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -452,7 +455,7 @@ class AudioPlayerState extends State<AudioPlayerWidget> {
                           crossFadeState: audioPlayer == null
                               ? CrossFadeState.showFirst
                               : CrossFadeState.showSecond,
-                          duration: FluffyThemes.animationDuration,
+                          duration: ZazzyThemes.animationDuration,
                         ),
                       ],
                     ),

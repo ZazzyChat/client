@@ -6,11 +6,11 @@ import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
 import '../../widgets/matrix.dart';
 import 'settings_homeserver.dart';
 
@@ -27,8 +27,8 @@ class SettingsHomeserverView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: !FluffyThemes.isColumnMode(context),
-        centerTitle: FluffyThemes.isColumnMode(context),
+        automaticallyImplyLeading: !ZazzyThemes.isColumnMode(context),
+        centerTitle: ZazzyThemes.isColumnMode(context),
         title: Text(
           L10n.of(context)
               .aboutHomeserver(client.userID?.domain ?? 'Homeserver'),

@@ -4,11 +4,11 @@ import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/date_time_extension.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
-import 'package:wokytoky/widgets/avatar.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/date_time_extension.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
+import 'package:zazzychat/widgets/avatar.dart';
 
 class ChatSearchMessageTab extends StatelessWidget {
   final String searchQuery;

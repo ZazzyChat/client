@@ -1,4 +1,4 @@
-import 'package:wokytoky/config/setting_keys.dart';
+import 'package:zazzychat/config/setting_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -7,9 +7,9 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:matrix/matrix.dart';
 import 'package:slugify/slugify.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/markdown_context_builder.dart';
-import 'package:wokytoky/widgets/mxc_image.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/markdown_context_builder.dart';
+import 'package:zazzychat/widgets/mxc_image.dart';
 import '../../widgets/avatar.dart';
 import '../../widgets/matrix.dart';
 import 'command_hints.dart';

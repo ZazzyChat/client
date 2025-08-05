@@ -6,11 +6,11 @@ import 'package:matrix/matrix.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:qr_image/qr_image.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/fluffy_share.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/zazzy_share.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
 import '../config/themes.dart';
 
 Future<void> showQrCodeViewer(
@@ -76,7 +76,7 @@ class QrCodeViewer extends StatelessWidget {
               backgroundColor: Colors.black.withAlpha(128),
             ),
             icon: Icon(Icons.adaptive.share_outlined),
-            onPressed: () => FluffyShare.share(
+            onPressed: () => ZazzyShare.share(
               inviteLink,
               context,
             ),
@@ -109,7 +109,7 @@ class QrCodeViewer extends StatelessWidget {
             children: [
               ConstrainedBox(
                 constraints:
-                    const BoxConstraints(maxWidth: FluffyThemes.columnWidth),
+                    const BoxConstraints(maxWidth: ZazzyThemes.columnWidth),
                 child: PrettyQrView.data(
                   data: inviteLink,
                   decoration: PrettyQrDecoration(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_text_input_dialog.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
 
 Widget markdownContextBuilder(
   BuildContext context,

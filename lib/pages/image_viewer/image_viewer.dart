@@ -3,11 +3,11 @@ import 'package:flutter/services.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/pages/image_viewer/image_viewer_view.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/show_scaffold_dialog.dart';
-import 'package:wokytoky/widgets/share_scaffold_dialog.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/pages/image_viewer/image_viewer_view.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/show_scaffold_dialog.dart';
+import 'package:zazzychat/widgets/share_scaffold_dialog.dart';
 import '../../utils/matrix_sdk_extensions/event_extension.dart';
 
 class ImageViewer extends StatefulWidget {
@@ -67,8 +67,8 @@ class ImageViewerController extends State<ImageViewer> {
 
   void prevImage() async {
     await pageController.previousPage(
-      duration: FluffyThemes.animationDuration,
-      curve: FluffyThemes.animationCurve,
+      duration: ZazzyThemes.animationDuration,
+      curve: ZazzyThemes.animationCurve,
     );
     if (!mounted) return;
     setState(() {});
@@ -76,8 +76,8 @@ class ImageViewerController extends State<ImageViewer> {
 
   void nextImage() async {
     await pageController.nextPage(
-      duration: FluffyThemes.animationDuration,
-      curve: FluffyThemes.animationCurve,
+      duration: ZazzyThemes.animationDuration,
+      curve: ZazzyThemes.animationCurve,
     );
     if (!mounted) return;
     setState(() {});

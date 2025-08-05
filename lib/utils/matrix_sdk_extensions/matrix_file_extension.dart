@@ -8,10 +8,10 @@ import 'package:matrix/matrix.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:universal_html/html.dart' as html;
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/size_string.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/size_string.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
 
 extension MatrixFileExtension on MatrixFile {
   void save(BuildContext context) async {

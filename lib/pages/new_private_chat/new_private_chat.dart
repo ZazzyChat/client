@@ -6,14 +6,14 @@ import 'package:flutter/services.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/new_private_chat/new_private_chat_view.dart';
-import 'package:wokytoky/pages/new_private_chat/qr_scanner_modal.dart';
-import 'package:wokytoky/utils/adaptive_bottom_sheet.dart';
-import 'package:wokytoky/utils/fluffy_share.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/url_launcher.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/new_private_chat/new_private_chat_view.dart';
+import 'package:zazzychat/pages/new_private_chat/qr_scanner_modal.dart';
+import 'package:zazzychat/utils/adaptive_bottom_sheet.dart';
+import 'package:zazzychat/utils/zazzy_share.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/url_launcher.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../widgets/adaptive_dialogs/user_dialog.dart';
 
 class NewPrivateChat extends StatefulWidget {
@@ -65,7 +65,7 @@ class NewPrivateChatController extends State<NewPrivateChat> {
     return profiles;
   }
 
-  void inviteAction() => FluffyShare.shareInviteLink(context);
+  void inviteAction() => ZazzyShare.shareInviteLink(context);
 
   void openScannerAction() async {
     if (PlatformInfos.isAndroid) {

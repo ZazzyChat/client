@@ -6,10 +6,10 @@ import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart' as sdk;
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/new_group/new_group_view.dart';
-import 'package:wokytoky/utils/file_selector.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/new_group/new_group_view.dart';
+import 'package:zazzychat/utils/file_selector.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class NewGroup extends StatefulWidget {
   final CreateGroupType createGroupType;

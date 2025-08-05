@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:wokytoky/pages/chat_list/chat_list_body.dart';
-import 'package:wokytoky/pages/homeserver_picker/homeserver_picker.dart';
+import 'package:zazzychat/pages/chat_list/chat_list_body.dart';
+import 'package:zazzychat/pages/homeserver_picker/homeserver_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

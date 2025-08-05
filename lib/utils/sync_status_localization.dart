@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
 
 extension SyncStatusLocalization on SyncStatusUpdate {
   String calcLocalizedString(BuildContext context) {

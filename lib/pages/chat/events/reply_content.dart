@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
 import '../../../config/app_config.dart';
 
 class ReplyContent extends StatelessWidget {

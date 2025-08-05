@@ -10,12 +10,12 @@ import 'package:flutter_shortcuts_new/flutter_shortcuts_new.dart';
 import 'package:matrix/matrix.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/client_download_content_extension.dart';
-import 'package:wokytoky/utils/client_manager.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/client_download_content_extension.dart';
+import 'package:zazzychat/utils/client_manager.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
 
 const notificationAvatarDimension = 128;
 
@@ -40,7 +40,7 @@ Future<void> pushHelper(
     l10n ??= await lookupL10n(const Locale('en'));
     flutterLocalNotificationsPlugin.show(
       notification.roomId?.hashCode ?? 0,
-      l10n.newMessageInFluffyChat,
+      l10n.newMessageInZazzyChat,
       l10n.openAppToReadMessages,
       NotificationDetails(
         iOS: const DarwinNotificationDetails(),
@@ -143,7 +143,7 @@ Future<void> _tryPushHelper(
 
   // Calculate the body
   final body = event.type == EventTypes.Encrypted
-      ? l10n.newMessageInFluffyChat
+      ? l10n.newMessageInZazzyChat
       : await event.calcLocalizedBody(
           matrixLocals,
           plaintextBody: true,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
+import 'package:zazzychat/l10n/l10n.dart';
 
 /// Provides extra functionality for formatting the time.
 extension DateTimeExtension on DateTime {

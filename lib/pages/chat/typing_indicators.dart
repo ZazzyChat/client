@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/pages/chat/chat.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/pages/chat/chat.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class TypingIndicators extends StatelessWidget {
   final ChatController controller;
@@ -34,10 +34,10 @@ class TypingIndicators extends StatelessWidget {
           alignment: Alignment.center,
           child: AnimatedContainer(
             constraints:
-                const BoxConstraints(maxWidth: FluffyThemes.maxTimelineWidth),
+                const BoxConstraints(maxWidth: ZazzyThemes.maxTimelineWidth),
             height: typingUsers.isEmpty ? 0 : avatarSize + 8,
-            duration: FluffyThemes.animationDuration,
-            curve: FluffyThemes.animationCurve,
+            duration: ZazzyThemes.animationDuration,
+            curve: ZazzyThemes.animationCurve,
             alignment: controller.timeline!.events.isNotEmpty &&
                     controller.timeline!.events.first.senderId ==
                         Matrix.of(context).client.userID
@@ -146,7 +146,7 @@ class __TypingDotsState extends State<_TypingDots> {
         for (var i = 1; i <= 3; i++)
           AnimatedContainer(
             duration: animationDuration * 1.5,
-            curve: FluffyThemes.animationCurve,
+            curve: ZazzyThemes.animationCurve,
             width: size,
             height: _tick == i ? size * 2 : size,
             margin: EdgeInsets.symmetric(

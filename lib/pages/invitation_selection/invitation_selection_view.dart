@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/invitation_selection/invitation_selection.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/invitation_selection/invitation_selection.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../widgets/adaptive_dialogs/user_dialog.dart';
 
 class InvitationSelectionView extends StatelessWidget {

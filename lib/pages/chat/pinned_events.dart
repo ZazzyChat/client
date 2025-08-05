@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/chat.dart';
-import 'package:wokytoky/pages/chat/chat_app_bar_list_tile.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_modal_action_popup.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/chat.dart';
+import 'package:zazzychat/pages/chat/chat_app_bar_list_tile.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_modal_action_popup.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
 
 class PinnedEvents extends StatelessWidget {
   final ChatController controller;

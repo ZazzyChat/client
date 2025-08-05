@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/widgets/layouts/login_scaffold.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/widgets/layouts/login_scaffold.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import 'login.dart';
 
 class LoginView extends StatelessWidget {

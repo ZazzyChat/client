@@ -17,28 +17,28 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_html/html.dart' as html;
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/setting_keys.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/chat_view.dart';
-import 'package:wokytoky/pages/chat/event_info_dialog.dart';
-import 'package:wokytoky/pages/chat/recording_dialog.dart';
-import 'package:wokytoky/pages/chat_details/chat_details.dart';
-import 'package:wokytoky/utils/error_reporter.dart';
-import 'package:wokytoky/utils/file_selector.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/event_extension.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/filtered_timeline_extension.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/utils/other_party_can_receive.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/show_scaffold_dialog.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_modal_action_popup.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_text_input_dialog.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/matrix.dart';
-import 'package:wokytoky/widgets/share_scaffold_dialog.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/setting_keys.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/chat_view.dart';
+import 'package:zazzychat/pages/chat/event_info_dialog.dart';
+import 'package:zazzychat/pages/chat/recording_dialog.dart';
+import 'package:zazzychat/pages/chat_details/chat_details.dart';
+import 'package:zazzychat/utils/error_reporter.dart';
+import 'package:zazzychat/utils/file_selector.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/filtered_timeline_extension.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/utils/other_party_can_receive.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/show_scaffold_dialog.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_modal_action_popup.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/matrix.dart';
+import 'package:zazzychat/widgets/share_scaffold_dialog.dart';
 import '../../utils/account_bundles.dart';
 import '../../utils/localized_exception_extension.dart';
 import 'send_file_dialog.dart';
@@ -998,7 +998,7 @@ class ChatController extends State<ChatPageWithRoom>
     }
     await scrollController.scrollToIndex(
       eventIndex + 1,
-      duration: FluffyThemes.animationDuration,
+      duration: ZazzyThemes.animationDuration,
       preferPosition: AutoScrollPosition.middle,
     );
     _updateScrollController();
@@ -1337,7 +1337,7 @@ class ChatController extends State<ChatPageWithRoom>
         ValueListenableBuilder(
           valueListenable: _displayChatDetailsColumn,
           builder: (context, displayChatDetailsColumn, _) =>
-              !FluffyThemes.isThreeColumnMode(context) ||
+              !ZazzyThemes.isThreeColumnMode(context) ||
                       room.membership != Membership.join ||
                       !displayChatDetailsColumn
                   ? const SizedBox(
@@ -1345,7 +1345,7 @@ class ChatController extends State<ChatPageWithRoom>
                       width: 0,
                     )
                   : Container(
-                      width: FluffyThemes.columnWidth,
+                      width: ZazzyThemes.columnWidth,
                       clipBehavior: Clip.hardEdge,
                       decoration: BoxDecoration(
                         border: Border(

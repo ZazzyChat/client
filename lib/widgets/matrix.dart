@@ -17,16 +17,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/utils/client_manager.dart';
-import 'package:wokytoky/utils/init_with_restore.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import 'package:wokytoky/utils/platform_infos.dart';
-import 'package:wokytoky/utils/uia_request_manager.dart';
-import 'package:wokytoky/utils/voip_plugin.dart';
-import 'package:wokytoky/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:wokytoky/widgets/fluffy_chat_app.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/utils/client_manager.dart';
+import 'package:zazzychat/utils/init_with_restore.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:zazzychat/utils/platform_infos.dart';
+import 'package:zazzychat/utils/uia_request_manager.dart';
+import 'package:zazzychat/utils/voip_plugin.dart';
+import 'package:zazzychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:zazzychat/widgets/zazzy_chat_app.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
 import '../config/app_config.dart';
 import '../config/setting_keys.dart';
 import '../pages/key_verification/key_verification_dialog.dart';
@@ -172,7 +172,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
             );
             _registerSubs(_loginClientCandidate!.clientName);
             _loginClientCandidate = null;
-            FluffyChatApp.router.go('/rooms');
+            ZazzyChatApp.router.go('/rooms');
           });
     if (widget.clients.isEmpty) widget.clients.add(candidate);
     return candidate;
@@ -207,7 +207,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
   bool webHasFocus = true;
 
   String? get activeRoomId {
-    final route = FluffyChatApp.router.routeInformationProvider.value.uri.path;
+    final route = ZazzyChatApp.router.routeInformationProvider.value.uri.path;
     if (!route.startsWith('/rooms/')) return null;
     return route.split('/')[2];
   }
@@ -269,14 +269,14 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
         if (!hidPopup &&
             {KeyVerificationState.done, KeyVerificationState.error}
                 .contains(request.state)) {
-          FluffyChatApp.router.pop('dialog');
+          ZazzyChatApp.router.pop('dialog');
         }
         hidPopup = true;
       };
       request.onUpdate = null;
       hidPopup = true;
       await KeyVerificationDialog(request: request).show(
-        FluffyChatApp.router.routerDelegate.navigatorKey.currentContext ??
+        ZazzyChatApp.router.routerDelegate.navigatorKey.currentContext ??
             context,
       );
     });
@@ -290,7 +290,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
       }
       if (loggedInWithMultipleClients && state != LoginState.loggedIn) {
         ScaffoldMessenger.of(
-          FluffyChatApp.router.routerDelegate.navigatorKey.currentContext ??
+          ZazzyChatApp.router.routerDelegate.navigatorKey.currentContext ??
               context,
         ).showSnackBar(
           SnackBar(
@@ -299,10 +299,10 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
         );
 
         if (state != LoginState.loggedIn) {
-          FluffyChatApp.router.go('/rooms');
+          ZazzyChatApp.router.go('/rooms');
         }
       } else {
-        FluffyChatApp.router
+        ZazzyChatApp.router
             .go(state == LoginState.loggedIn ? '/rooms' : '/home');
       }
     });
@@ -342,7 +342,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
         this,
         onFcmError: (errorMsg, {Uri? link}) async {
           final result = await showOkCancelAlertDialog(
-            context: FluffyChatApp
+            context: ZazzyChatApp
                     .router.routerDelegate.navigatorKey.currentContext ??
                 context,
             title: L10n.of(context).pushNotificationsNotAvailable,
@@ -486,7 +486,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
     );
 
     final exportFileName =
-        'fluffychat-export-${DateFormat(DateFormat.YEAR_MONTH_DAY).format(DateTime.now())}.fluffybackup';
+        'zazzychat-export-${DateFormat(DateFormat.YEAR_MONTH_DAY).format(DateTime.now())}.zazzybackup';
 
     final file = MatrixFile(bytes: exportBytes, name: exportFileName);
     file.save(context);

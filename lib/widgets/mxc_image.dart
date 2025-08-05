@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/utils/client_download_content_extension.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/utils/client_download_content_extension.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class MxcImage extends StatefulWidget {
   final Uri? uri;
@@ -36,9 +36,9 @@ class MxcImage extends StatefulWidget {
     this.placeholder,
     this.isThumbnail = true,
     this.animated = false,
-    this.animationDuration = FluffyThemes.animationDuration,
+    this.animationDuration = ZazzyThemes.animationDuration,
     this.retryDuration = const Duration(seconds: 2),
-    this.animationCurve = FluffyThemes.animationCurve,
+    this.animationCurve = ZazzyThemes.animationCurve,
     this.thumbnailMethod = ThumbnailMethod.scale,
     this.cacheKey,
     this.client,

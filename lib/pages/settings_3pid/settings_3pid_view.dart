@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/settings_3pid/settings_3pid.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/settings_3pid/settings_3pid.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 
 class Settings3PidView extends StatelessWidget {
   final Settings3PidController controller;

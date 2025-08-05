@@ -4,15 +4,15 @@ import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat_details/chat_details.dart';
-import 'package:wokytoky/pages/chat_details/participant_list_item.dart';
-import 'package:wokytoky/utils/fluffy_share.dart';
-import 'package:wokytoky/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:wokytoky/widgets/avatar.dart';
-import 'package:wokytoky/widgets/chat_settings_popup_menu.dart';
-import 'package:wokytoky/widgets/layouts/max_width_body.dart';
-import 'package:wokytoky/widgets/matrix.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat_details/chat_details.dart';
+import 'package:zazzychat/pages/chat_details/participant_list_item.dart';
+import 'package:zazzychat/utils/zazzy_share.dart';
+import 'package:zazzychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:zazzychat/widgets/avatar.dart';
+import 'package:zazzychat/widgets/chat_settings_popup_menu.dart';
+import 'package:zazzychat/widgets/layouts/max_width_body.dart';
+import 'package:zazzychat/widgets/matrix.dart';
 import '../../utils/url_launcher.dart';
 import '../../widgets/mxc_image_viewer.dart';
 import '../../widgets/qr_code_viewer.dart';
@@ -149,7 +149,7 @@ class ChatDetailsView extends StatelessWidget {
                                             EventTypes.RoomName,
                                           )
                                             ? controller.setDisplaynameAction()
-                                            : FluffyShare.share(
+                                            : ZazzyShare.share(
                                                 displayname,
                                                 context,
                                                 copyOnly: true,

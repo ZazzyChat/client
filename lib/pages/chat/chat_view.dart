@@ -6,23 +6,23 @@ import 'package:badges/badges.dart';
 import 'package:desktop_drop/desktop_drop.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:wokytoky/config/app_config.dart';
-import 'package:wokytoky/config/themes.dart';
-import 'package:wokytoky/l10n/l10n.dart';
-import 'package:wokytoky/pages/chat/chat.dart';
-import 'package:wokytoky/pages/chat/chat_app_bar_list_tile.dart';
-import 'package:wokytoky/pages/chat/chat_app_bar_title.dart';
-import 'package:wokytoky/pages/chat/chat_event_list.dart';
-import 'package:wokytoky/pages/chat/encryption_button.dart';
-import 'package:wokytoky/pages/chat/pinned_events.dart';
-import 'package:wokytoky/pages/chat/reply_display.dart';
-import 'package:wokytoky/utils/account_config.dart';
-import 'package:wokytoky/utils/localized_exception_extension.dart';
-import 'package:wokytoky/widgets/chat_settings_popup_menu.dart';
-import 'package:wokytoky/widgets/future_loading_dialog.dart';
-import 'package:wokytoky/widgets/matrix.dart';
-import 'package:wokytoky/widgets/mxc_image.dart';
-import 'package:wokytoky/widgets/unread_rooms_badge.dart';
+import 'package:zazzychat/config/app_config.dart';
+import 'package:zazzychat/config/themes.dart';
+import 'package:zazzychat/l10n/l10n.dart';
+import 'package:zazzychat/pages/chat/chat.dart';
+import 'package:zazzychat/pages/chat/chat_app_bar_list_tile.dart';
+import 'package:zazzychat/pages/chat/chat_app_bar_title.dart';
+import 'package:zazzychat/pages/chat/chat_event_list.dart';
+import 'package:zazzychat/pages/chat/encryption_button.dart';
+import 'package:zazzychat/pages/chat/pinned_events.dart';
+import 'package:zazzychat/pages/chat/reply_display.dart';
+import 'package:zazzychat/utils/account_config.dart';
+import 'package:zazzychat/utils/localized_exception_extension.dart';
+import 'package:zazzychat/widgets/chat_settings_popup_menu.dart';
+import 'package:zazzychat/widgets/future_loading_dialog.dart';
+import 'package:zazzychat/widgets/matrix.dart';
+import 'package:zazzychat/widgets/mxc_image.dart';
+import 'package:zazzychat/widgets/unread_rooms_badge.dart';
 import '../../utils/stream_extension.dart';
 import 'chat_emoji_picker.dart';
 import 'chat_input_row.dart';
@@ -144,7 +144,7 @@ class ChatView extends StatelessWidget {
         exceptionContext: ExceptionContext.joinRoom,
       );
     }
-    final bottomSheetPadding = FluffyThemes.isColumnMode(context) ? 16.0 : 8.0;
+    final bottomSheetPadding = ZazzyThemes.isColumnMode(context) ? 16.0 : 8.0;
     final scrollUpBannerEventId = controller.scrollUpBannerEventId;
 
     final accountConfig = Matrix.of(context).client.applicationAccountConfig;
@@ -191,7 +191,7 @@ class ChatView extends StatelessWidget {
                         tooltip: L10n.of(context).close,
                         color: theme.colorScheme.onTertiaryContainer,
                       )
-                    : FluffyThemes.isColumnMode(context)
+                    : ZazzyThemes.isColumnMode(context)
                         ? null
                         : StreamBuilder<Object>(
                             stream:
@@ -205,7 +205,7 @@ class ChatView extends StatelessWidget {
                               child: const Center(child: BackButton()),
                             ),
                           ),
-                titleSpacing: FluffyThemes.isColumnMode(context) ? 24 : 0,
+                titleSpacing: ZazzyThemes.isColumnMode(context) ? 24 : 0,
                 title: ChatAppBarTitle(controller),
                 actions: _appBarActions(context),
                 bottom: PreferredSize(
@@ -310,7 +310,7 @@ class ChatView extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.all(bottomSheetPadding),
                               constraints: const BoxConstraints(
-                                maxWidth: FluffyThemes.maxTimelineWidth,
+                                maxWidth: ZazzyThemes.maxTimelineWidth,
                               ),
                               alignment: Alignment.center,
                               child: Material(

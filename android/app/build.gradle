@@ -31,7 +31,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     compileSdk = 35
-    namespace = "com.wokytoky.chat"
+    namespace = "com.zazzychat.chat"
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -42,7 +42,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.wokytoky.chat"
+        applicationId "com.zazzychat.chat"
         minSdkVersion 21
         targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
