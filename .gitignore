@@ -1928,3 +1928,6 @@ android/local.properties
 .DS_Store
 .idea/
 
+# 🔐 Keystore & credentials
+zazzychat-release.keystore
+key.properties
