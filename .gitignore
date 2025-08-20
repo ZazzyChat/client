@@ -1929,5 +1929,5 @@ android/local.properties
 .idea/
 
 # 🔐 Keystore & credentials
-zazzychat-release.keystore
-key.properties
+android/app/zazzychat-release.keystore
+.keystore

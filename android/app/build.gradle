@@ -2,7 +2,7 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
-    //id "com.google.gms.google-services"
+    // id "com.google.gms.google-services"
 }
 
 def localProperties = new Properties()
@@ -13,33 +13,12 @@ if (localPropertiesFile.exists()) {
     }
 }
 
-def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
-if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
-}
-
-def flutterVersionName = localProperties.getProperty('flutter.versionName')
-if (flutterVersionName == null) {
-    flutterVersionName = '1.0'
-}
-
-def keystoreProperties = new Properties()
-def keystorePropertiesFile = rootProject.file('key.properties')
-if (keystorePropertiesFile.exists()) {
-    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-}
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode') ?: '1'
+def flutterVersionName = localProperties.getProperty('flutter.versionName') ?: '1.0'
 
 android {
+    namespace "com.zazzychat.chat"
     compileSdk = 35
-    namespace = "com.zazzychat.chat"
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
-
-    lintOptions {
-        disable 'InvalidPackage'
-    }
 
     defaultConfig {
         applicationId "com.zazzychat.chat"
@@ -53,14 +32,13 @@ android {
 
     signingConfigs {
         release {
-            if (keystorePropertiesFile.exists()) {
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
-                storePassword keystoreProperties['storePassword']
-            }
+            keyAlias 'zazzykey'
+            keyPassword 'Ojaebu-000'
+            storeFile file('zazzychat-release.keystore')
+            storePassword 'Ojaebu-000'
         }
     }
+
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -72,7 +50,15 @@ android {
             signingConfig signingConfigs.release
         }
     }
-    // https://stackoverflow.com/a/77494454/8222484
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
     packagingOptions {
         pickFirst 'lib/x86/libc++_shared.so'
         pickFirst 'lib/x86_64/libc++_shared.so'
@@ -91,15 +77,14 @@ android {
     }
 }
 
-
 flutter {
     source '../..'
 }
 
 dependencies {
-    //implementation 'com.google.firebase:firebase-messaging:19.0.1' // Workaround for https://github.com/microg/android_packages_apps_GmsCore/issues/313#issuecomment-617651698
     implementation 'androidx.multidex:multidex:2.0.1'
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+    // implementation 'com.google.firebase:firebase-messaging:19.0.1' // optional workaround
 }
 
 configurations.all {
