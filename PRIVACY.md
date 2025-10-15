@@ -58,7 +58,7 @@ ZazzyChat uses the Firebase Cloud Messaging service for push notifications on An
 4. The device receives the push notification from Firebase Cloud Messaging and displays it as a notification
 
 The source code of the push gateway can be viewed here:
-[https://gitlab.com/famedly/services/famedly-push-gateway](https://gitlab.com/famedly/services/famedly-push-gateway)
+[https://github.com/ZazzyChat/client](https://github.com/ZazzyChat/client)
 
 `event_id_only` is used as the format for the push notification. A typical push notification therefore only contains:
 - Event ID

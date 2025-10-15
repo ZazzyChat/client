@@ -1,20 +1,5 @@
-![Screenshot](https://github.com/krille-chan/zazzychat/blob/main/assets/banner_transparent.png?raw=true)
-
 [ZazzyChat](https://zazzychat.im) is an open source, nonprofit and cute [[matrix](https://matrix.org)] client written in [Flutter](https://flutter.dev). The goal of the app is to create an easy to use instant messenger which is open source and accessible for everyone.
 
-### Links:
-
-- 🌐 [[Weblate] Translate ZazzyChat into your language](https://hosted.weblate.org/projects/zazzychat/)
-- 🌍 [[m] Join the community](https://matrix.to/#/#zazzychat:matrix.org)
-- 📰 [[Mastodon] Get updates on social media](https://troet.cafe/@krille)
-- 🖥️ [[Famedly] Server hosting and professional support](https://famedly.com/kontakt)
-- 💝 [[Liberapay] Support ZazzyChat development](https://de.liberapay.com/KrilleChritzelius)
-
-<a href='https://ko-fi.com/C1C86VN53' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
-### Screenshots:
-
-![Screenshot](https://github.com/krille-chan/zazzychat/blob/main/docs/screenshots/product.jpeg?raw=true)
 
 # Features
 
@@ -43,25 +28,9 @@
 
 Please visit the website for installation instructions:
 
-- https://zazzychat.im
+- https://zazzy.chat
 
 # How to build
 
-Please visit the [Wiki](https://github.com/krille-chan/zazzychat/wiki) for build instructions:
-
-- https://github.com/krille-chan/zazzychat/wiki/How-To-Build
-
-
-# Special thanks
-
-* <a href="https://github.com/fabiyamada">Fabiyamada</a> is a graphics designer and has made the zazzychat logo and the banner. Big thanks for her great designs.
-
-* <a href="https://github.com/advocatux">Advocatux</a> has made the Spanish translation with great love and care. He always stands by my side and supports my work with great commitment.
-
-* Thanks to MTRNord and Sorunome for developing.
-
-* Also thanks to all translators and testers! With your help, zazzychat is now available in more than 12 languages.
-
-* <a href="https://github.com/madsrh/WoodenBeaver">WoodenBeaver</a> sound theme for the notification sound.
 
 * The Matrix Foundation for making and maintaining the [emoji translations](https://github.com/matrix-org/matrix-spec/blob/main/data-definitions/sas-emoji.json) used for emoji verification, licensed Apache 2.0
