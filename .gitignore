@@ -1931,3 +1931,5 @@ android/local.properties
 # 🔐 Keystore & credentials
 android/app/zazzychat-release.keystore
 .keystore
+deploy_only.sh
+deploy_apk.sh
