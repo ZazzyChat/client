@@ -714,7 +714,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "{username} uzaicināja pievienoties ZazzyChat.\n1. Jāapmeklē zazzychat.im un jāuzstāda lietotne \n2. Jāizveido konts vai jāpiesakās \n3. Jāatver uzaicinājuma saite: \n {link}",
+  "inviteText": "{username} uzaicināja pievienoties ZazzyChat.\n1. Jāapmeklē zazzy.chat un jāuzstāda lietotne \n2. Jāizveido konts vai jāpiesakās \n3. Jāatver uzaicinājuma saite: \n {link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {

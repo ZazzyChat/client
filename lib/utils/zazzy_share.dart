@@ -36,7 +36,7 @@ abstract class ZazzyShare {
     await ZazzyShare.share(
       L10n.of(context).inviteText(
         ownProfile.displayName ?? client.userID!,
-        'https://matrix.to/#/${client.userID}?client=im.zazzychat',
+        'https://zazzy.chat/${client.userID}?client=im.zazzychat',
       ),
       context,
     );

@@ -998,7 +998,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "{username} vás pozvali na ZazzyChat.\n1. Navštivte zazzychat.im a nainstalujte si aplikaci.\n2. Zaregistrujte se anebo se přihlašte.\n3. Otevřete pozvánku: \n {link}",
+  "inviteText": "{username} vás pozvali na ZazzyChat.\n1. Navštivte zazzy.chat a nainstalujte si aplikaci.\n2. Zaregistrujte se anebo se přihlašte.\n3. Otevřete pozvánku: \n {link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {

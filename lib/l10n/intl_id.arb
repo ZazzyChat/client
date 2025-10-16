@@ -98,7 +98,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "{username} mengundang kamu ke ZazzyChat. \n1. Kunjungi zazzychat.im dan instal aplikasi\n2. Daftar atau masuk \n3. Buka tautan undangan: \n {link}",
+  "inviteText": "{username} mengundang kamu ke ZazzyChat. \n1. Kunjungi zazzy.chat dan instal aplikasi\n2. Daftar atau masuk \n3. Buka tautan undangan: \n {link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {

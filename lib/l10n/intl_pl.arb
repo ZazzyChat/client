@@ -890,7 +890,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "{username} zaprosił/-a Cię do ZazzyChat.\n1. Odwiedź zazzychat.im i zainstaluj aplikację\n2. Zarejestuj się lub zaloguj\n3. Otwórz link zaproszenia:\n{link}",
+  "inviteText": "{username} zaprosił/-a Cię do ZazzyChat.\n1. Odwiedź zazzy.chat i zainstaluj aplikację\n2. Zarejestuj się lub zaloguj\n3. Otwórz link zaproszenia:\n{link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {

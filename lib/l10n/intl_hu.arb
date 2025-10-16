@@ -680,7 +680,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "{username} meghívta a ZazzyChat-be.\n1. Keresse fel a zazzychat.im oldalt, és telepítse az alkalmazást \n2. Regisztráljon vagy jelentkezzen be \n3. Nyissa meg a meghívó linket: \n {link}",
+  "inviteText": "{username} meghívta a ZazzyChat-be.\n1. Keresse fel a zazzy.chat oldalt, és telepítse az alkalmazást \n2. Regisztráljon vagy jelentkezzen be \n3. Nyissa meg a meghívó linket: \n {link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {

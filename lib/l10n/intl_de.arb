@@ -997,7 +997,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "{username} hat Dich zu ZazzyChat eingeladen. \n1. Gehe auf zazzychat.im und installiere die App \n2. Melde Dich in der App an \n3. Öffne den Einladungslink: \n {link}",
+  "inviteText": "{username} hat Dich zu ZazzyChat eingeladen. \n1. Gehe auf zazzy.chat und installiere die App \n2. Melde Dich in der App an \n3. Öffne den Einladungslink: \n {link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {

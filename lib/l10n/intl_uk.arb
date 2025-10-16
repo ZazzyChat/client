@@ -635,7 +635,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "{username} запрошує вас у ZazzyChat. \n1. Перейдіть на zazzychat.im й установіть застосунок \n2. Зареєструйтесь або ввійдіть \n3. Відкрийте запрошувальне посилання:\n {link}",
+  "inviteText": "{username} запрошує вас у ZazzyChat. \n1. Перейдіть на zazzy.chat й установіть застосунок \n2. Зареєструйтесь або ввійдіть \n3. Відкрийте запрошувальне посилання:\n {link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {

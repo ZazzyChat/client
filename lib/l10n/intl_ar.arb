@@ -650,7 +650,7 @@
     "type": "String",
     "placeholders": {}
   },
-  "inviteText": "دعاك {username} إلى ZazzyChat.\n1. قم بزيارة موقع zazzychat.im وقم بتثبيت التطبيق\n2. قم بإنشاءحساب أو تسجيل الدخول\n3. افتح رابط الدعوة:\n {link}",
+  "inviteText": "دعاك {username} إلى ZazzyChat.\n1. قم بزيارة موقع zazzy.chat وقم بتثبيت التطبيق\n2. قم بإنشاءحساب أو تسجيل الدخول\n3. افتح رابط الدعوة:\n {link}",
   "@inviteText": {
     "type": "String",
     "placeholders": {
