@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ZazzyChat
+GenericName=Matrix Client
+Comment=Chat with your friends
+Exec=zazzychat
+Icon=${SNAP}/meta/gui/zazzychat.png
+Terminal=false
+Type=Application
+Categories=Network;Chat;InstantMessaging;

@@ -1,0 +1,17 @@
+Categories:
+  - Internet
+  - Phone & SMS
+License: AGPL-3.0-only
+AuthorName: Zanozzo
+SourceCode: https://github.com/ZazzyChat/client
+
+AutoName: ZazzyChat
+Summary: "Chat with your friends with ZazzyChat.\n"
+Description: |
+    ZazzyChat is an open, nonprofit and cute matrix messenger app for Ubuntu Touch, Android and iOS.
+
+RepoType: git
+Repo: https://github.com/ZazzyChat/client.git
+
+AutoUpdateMode: None
+UpdateCheckMode: None
